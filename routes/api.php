@@ -18,3 +18,9 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:api');
 
 Route::resource('contacts','ContactController');
+Route::resource('users','UserController');
+Route::resource('students','StudentController');
+Route::resource('values','ValueController');
+Route::resource('classes','KelasController');
+Route::resource('subjects','SubjectController');
+Route::resource('teachers','TeacherController');
