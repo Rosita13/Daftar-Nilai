@@ -5,21 +5,21 @@ namespace App\Http\Controllers;
 use App\Http\Requests\User\UserCreateRequest;
 use App\Http\Requests\User\UserEditRequest;
 use Illuminate\Http\Request;
-use App\Domain\Contracts\UserRepository;
+use App\Domain\Contracts\UserInterface;
 
 class UserController extends Controller
 {
 
     /**
-     * @var UserRepository
+     * @var UserInterface
      */
     protected $user;
 
     /**
      * UserController constructor.
-     * @param UserRepository $user
+     * @param UserInterface $user
      */
-    public function __construct(UserRepository $user)
+    public function __construct(UserInterface $user)
     {
         $this->user = $user;
     }

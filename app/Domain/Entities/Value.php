@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Class Student
  * @package App\Domain\Entities
  */
-class Values extends Model
+class Value extends Model
 {
     use SoftDeletes;
 

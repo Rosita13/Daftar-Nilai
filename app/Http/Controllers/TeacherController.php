@@ -5,21 +5,21 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Seacher\SeacherCreateRequest;
 use App\Http\Requests\Seacher\SeacherEditRequest;
 use Illuminate\Http\Request;
-use App\Domain\Contracts\SeacherInterface;
+use App\Domain\Contracts\TeacherInterface;
 
-class SeacherController extends Controller
+class TeacherController extends Controller
 {
 
     /**
-     * @var SeacherInterface
+     * @var TeacherInterface
      */
     protected $teacher;
 
     /**
      * SeacherController constructor.
-     * @param SeacherInterface $teacher
+     * @param TeacherInterface $teacher
      */
-    public function __construct(SeacherInterface $teacher)
+    public function __construct(TeacherInterface $teacher)
     {
         $this->teacher = $teacher;
     }
