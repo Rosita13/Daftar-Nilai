@@ -27,5 +27,29 @@ class AppServiceProvider extends ServiceProvider
         $this->app->when('App\Http\Controllers\ContactController')
             ->needs('App\Domain\Contracts\ContactInterface')
             ->give('App\Domain\Repositories\ContactRepository');
+
+        $this->app->when('App\Http\Controllers\StudentController')
+            ->needs('App\Domain\Contracts\StudentInterface')
+            ->give('App\Domain\Repositories\StudentRepository');
+
+        $this->app->when('App\Http\Controllers\ValueController')
+            ->needs('App\Domain\Contracts\ValueInterface')
+            ->give('App\Domain\Repositories\ValueRepository');
+
+        $this->app->when('App\Http\Controllers\KelasController')
+            ->needs('App\Domain\Contracts\KelasInterface')
+            ->give('App\Domain\Repositories\KelasRepository');
+
+        $this->app->when('App\Http\Controllers\SubjectController')
+            ->needs('App\Domain\Contracts\SubjectInterface')
+            ->give('App\Domain\Repositories\SubjectRepository');
+
+        $this->app->when('App\Http\Controllers\TeacherController')
+            ->needs('App\Domain\Contracts\TeacherInterface')
+            ->give('App\Domain\Repositories\TeacherRepository');
+
+        $this->app->when('App\Http\Controllers\UserController')
+            ->needs('App\Domain\Contracts\UserInterface')
+            ->give('App\Domain\Repositories\UserRepository');
     }
 }
