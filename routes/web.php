@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.dashboard');
+});
+Route::get('/list-siswa', function () {
+    return view('pages.list-siswa');
 });

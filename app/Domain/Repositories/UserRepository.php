@@ -64,7 +64,6 @@ class UserRepository extends AbstractRepository implements UserInterface, Crudab
             'phone'   => e($data['phone']),
             'password' => e($data['password']),
              'guru_id' => e($data['guru_id']),
-              'siswa_id' => e($data['siswa_id'])
         ]);
 
     }
@@ -83,7 +82,6 @@ class UserRepository extends AbstractRepository implements UserInterface, Crudab
             'phone'   => e($data['phone']),
             'password' => e($data['password']),
              'guru_id' => e($data['guru_id']),
-              'siswa_id' => e($data['siswa_id'])
         ]);
     }
 

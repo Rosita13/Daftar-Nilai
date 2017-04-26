@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Seacher\SeacherCreateRequest;
-use App\Http\Requests\Seacher\SeacherEditRequest;
+use App\Http\Requests\Teacher\TeacherCreateRequest;
+use App\Http\Requests\Teacher\TeacherEditRequest;
 use Illuminate\Http\Request;
 use App\Domain\Contracts\TeacherInterface;
 
@@ -65,7 +65,7 @@ class TeacherController extends Controller
      * @apiParam {Float} phone phone of teacher
      * @apiSuccess {Number} id id of teacher
      */
-    public function store(SeacherCreateRequest $request)
+    public function store(TeacherCreateRequest $request)
     {
         return $this->teacher->create($request->all());
     }

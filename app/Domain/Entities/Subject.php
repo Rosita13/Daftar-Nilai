@@ -21,4 +21,10 @@ class Subject extends Model
         'name','guru_id'
     ];
 
+     protected $with = ['teacher'];
+    public function teacher()
+    {
+        return $this->belongsTo('App\Domain\Entities\Teacher', 'guru_id');
+    }
+
 }

@@ -16,9 +16,14 @@ class Student extends Model
     /**
      * @var array
      */
-      protected $table = 'students';
     protected $fillable = [
         'name', 'class', 'email', 'phone','users_id'
     ];
+
+    protected $with = ['user'];
+    public function user()
+    {
+        return $this->belongsTo('App\Domain\Entities\User', 'users_id');
+    }
 
 }

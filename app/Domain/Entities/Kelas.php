@@ -20,5 +20,11 @@ class Kelas extends Model
     protected $fillable = [
         'guru_id'
     ];
+    
+     protected $with = ['teacher'];
+    public function teacher()
+    {
+        return $this->belongsTo('App\Domain\Entities\Teacher', 'guru_id');
+    }
 
 }

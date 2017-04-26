@@ -21,9 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('phone');
             $table->string('password');
             $table->integer('guru_id', false);
-             $table->integer('siswa_id', false);
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

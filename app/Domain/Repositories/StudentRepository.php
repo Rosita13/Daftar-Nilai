@@ -18,6 +18,7 @@ class StudentRepository extends AbstractRepository implements StudentInterface, 
      * @var Student
      */
     protected $model;
+    
 
     /**
      * StudentRepository constructor.

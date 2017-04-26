@@ -33,7 +33,6 @@ class UserEditRequest extends Request
         'phone'   => 'Phone',
         'password' => 'password',
         'guru_id' => 'guru_id',
-        'siswa_id' => 'siswa_id'
     ];
 
     /**
@@ -50,7 +49,6 @@ class UserEditRequest extends Request
             'phone'   => 'required|max:30',
             'password' => 'required|max:60',
             'guru_id' => 'required|max:60',
-            'siswa_id' => 'required|max:60'
         ];
     }
 

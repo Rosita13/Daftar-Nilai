@@ -21,4 +21,10 @@ class Value extends Model
         'siswa_id', 'type', 'status'
     ];
 
+     protected $with = ['student'];
+    public function student()
+    {
+        return $this->belongsTo('App\Domain\Entities\student', 'siswa_id');
+    }
+
 }
