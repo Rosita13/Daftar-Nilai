@@ -17,3 +17,18 @@ Route::get('/', function () {
 Route::get('/list-siswa', function () {
     return view('pages.list-siswa');
 });
+Route::get('/list-nilai', function () {
+    return view('pages.list-nilai');
+});
+Route::get('/list-user', function () {
+    return view('pages.list-user');
+});
+Route::get('/list-mapel', function () {
+    return view('pages.list-mapel');
+});
+Route::get('/list-guru', function () {
+    return view('pages.list-guru');
+});
+Route::get('/list-class', function () {
+    return view('pages.list-class');
+});

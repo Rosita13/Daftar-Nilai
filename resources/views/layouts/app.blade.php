@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- CSS-->
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href={{asset('css/main.css')}}>
   <title>Daftar Nilai - @yield('title')</title>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
   <!--if lt IE 9
@@ -25,11 +25,11 @@
     </div>
   </div>
 <!-- Javascripts-->
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/essential-plugins.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins/pace.min.js"></script>
-<script src="js/main.js"></script>
+<script src={{asset('js/jquery-2.1.4.min.js')}}></script>
+<script src={{asset('js/essential-plugins.js')}}></script>
+<script src={{asset('js/bootstrap.min.js')}}></script>
+<script src={{asset('js/plugins/pace.min.js')}}></script>
+<script src={{asset('js/main.js')}}></script>
   @yield('scripts')
 </body>
 

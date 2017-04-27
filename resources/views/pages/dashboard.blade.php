@@ -99,10 +99,10 @@ on GitHub</p>
 </div>
 @endsection
 @section('scripts')
-<script type="text/javascript" src="js/plugins/chart.js"></script>
-<script type="text/javascript" src="js/plugins/jquery.vmap.min.js"></script>
-<script type="text/javascript" src="js/plugins/jquery.vmap.world.js"></script>
-<script type="text/javascript" src="js/plugins/jquery.vmap.sampledata.js"></script>
+<script type="text/javascript" src={{asset('js/plugins/chart.js')}}></script>
+<script type="text/javascript" src={{asset('js/plugins/jquery.vmap.min.js')}}></script>
+<script type="text/javascript" src={{asset('js/plugins/jquery.vmap.world.js')}}></script>
+<script type="text/javascript" src={{asset('js/plugins/jquery.vmap.sampledata.js')}}></script>
 <script type="text/javascript">
       $(document).ready(function () {
         var data = {
