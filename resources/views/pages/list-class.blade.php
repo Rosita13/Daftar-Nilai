@@ -9,7 +9,7 @@
             <li class="active"><a href="#">Data Kelas</a></li>
           </ul>
         </div>
-        <div><a class="btn btn-primary btn-flat" href="create-class.html"><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
+        <div><a class="btn btn-primary btn-flat" href={{route('page.create-class')}}><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
             href="#"><i class="fa fa-lg fa-refresh"></i></a><a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a></div>
       </div>
       <div class="row">
@@ -31,7 +31,7 @@
                     <td>23</td>
                     <td>X RPL 2</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-class.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-class')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -40,7 +40,7 @@
                     <td>63</td>
                      <td>X RPL 2</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-class.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-class')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -49,7 +49,7 @@
                     <td>66</td>
                      <td>X RPL 2</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-class.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-class')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -58,7 +58,7 @@
                     <td>22</td>
                      <td>X RPL 2</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-class.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-class')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>

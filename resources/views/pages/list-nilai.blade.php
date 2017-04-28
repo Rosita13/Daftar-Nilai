@@ -9,7 +9,7 @@
             <li class="active"><a href="#">Data Nilai</a></li>
           </ul>
         </div>
-        <div><a class="btn btn-primary btn-flat" href="create-nilai.html"><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
+        <div><a class="btn btn-primary btn-flat" href={{route('page.create-nilai')}}><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
             href="#"><i class="fa fa-lg fa-refresh"></i></a>
           <a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a>
         </div>
@@ -43,7 +43,7 @@
                     <td>Remidi</td>
                     <th>1</th>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-nilai.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-nilai')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -57,7 +57,7 @@
                     <td>Lolos</td>
                     <th>1</th>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-nilai.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-nilai')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -71,7 +71,7 @@
                     <td>Lolos</td>
                     <th>1</th>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-nilai.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-nilai')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -85,7 +85,7 @@
                     <td>Remidi</td>
                     <th>1</th>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-nilai.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-nilai')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>

@@ -9,7 +9,7 @@
             <li class="active"><a href="#">Data Siswa</a></li>
           </ul>
         </div>
-        <div><a class="btn btn-primary btn-flat" href="create-siswa.html"><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
+        <div><a class="btn btn-primary btn-flat" href={{route('page.create-siswa')}}><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
             href="#"><i class="fa fa-lg fa-refresh"></i></a><a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a></div>
       </div>
       <div class="row">
@@ -37,7 +37,7 @@
                     <td>Lailatul@gmail.com</td>
                     <td>087654323456</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-siswa.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-siswa')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -49,7 +49,7 @@
                     <td>Rosita@gmail.com</td>
                     <td>087054323456</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-siswa.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-siswa')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -61,7 +61,7 @@
                     <td>Alfira@gmail.com</td>
                     <td>087684323456</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-siswa.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-siswa')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -73,7 +73,7 @@
                     <td>Syahrul@gmail.com</td>
                     <td>087650323456</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-siswa.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-siswa')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>

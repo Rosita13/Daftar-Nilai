@@ -9,7 +9,7 @@
             <li class="active"><a href="#">Data User</a></li>
           </ul>
         </div>
-        <div><a class="btn btn-primary btn-flat" href="create-user.html"><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
+        <div><a class="btn btn-primary btn-flat" href={{route('page.create-user')}}><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
             href="#"><i class="fa fa-lg fa-refresh"></i></a><a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a></div>
       </div>
       <div class="row">
@@ -35,7 +35,7 @@
                     <td>Lailatul@gmail.com</td>
                     <td>083245678998</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-user.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-user')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -46,7 +46,7 @@
                     <td>Rosita@gmail.com</td>
                     <td>085765432876</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-user.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-user')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -57,7 +57,7 @@
                     <td>Alfira@gmail.com</td>
                     <td>087567432187</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-user.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-user')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>
@@ -68,7 +68,7 @@
                     <td>Syahrul@gmail.com</td>
                     <td>087789054321</td>
                     <td>
-                      <a class="btn btn-info btn-flat" href="edit-user.html"><i class="fa fa-lg fa-edit"></i></a>
+                      <a class="btn btn-info btn-flat" href={{route('page.edit-user')}}><i class="fa fa-lg fa-edit"></i></a>
                       <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
                     </td>
                   </tr>

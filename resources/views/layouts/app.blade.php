@@ -30,6 +30,91 @@
 <script src={{asset('js/bootstrap.min.js')}}></script>
 <script src={{asset('js/plugins/pace.min.js')}}></script>
 <script src={{asset('js/main.js')}}></script>
+<script>
+    $(document).ready(function(){
+        var pathname = window.location.pathname;
+        console.log('url path =>',pathname);
+        switch (pathname) {
+            case '/':
+                $('#nav-list-class').removeClass('active');
+                $('#nav-list-guru').removeClass('active');
+                $('#nav-list-mapel').removeClass('active');
+                $('#nav-list-nilai').removeClass('active');
+                $('#nav-list-siswa').removeClass('active');
+                $('#nav-list-user').removeClass('active');
+                $('#nav-dashboard').addClass('active');
+                break; 
+            case '/list-user':
+            case '/create-user':
+            case '/edit-user':
+                $('#nav-list-class').removeClass('active');
+                $('#nav-list-guru').removeClass('active');
+                $('#nav-list-mapel').removeClass('active');
+                $('#nav-list-nilai').removeClass('active');
+                $('#nav-list-siswa').removeClass('active');
+                $('#nav-dashboard').removeClass('active');
+                $('#nav-list-user').addClass('active');
+                break; 
+            case '/list-guru':
+            case '/create-guru':
+            case '/edit-guru':
+                $('#nav-list-class').removeClass('active');
+                $('#nav-list-mapel').removeClass('active');
+                $('#nav-list-nilai').removeClass('active');
+                $('#nav-list-siswa').removeClass('active');
+                $('#nav-list-user').removeClass('active');
+                $('#nav-dashboard').removeClass('active');
+                $('#nav-list-guru').addClass('active');
+                break;  
+            case '/list-siswa':
+            case '/create-siswa':
+            case '/edit-siswa':
+                $('#nav-list-class').removeClass('active');
+                $('#nav-list-guru').removeClass('active');
+                $('#nav-list-mapel').removeClass('active');
+                $('#nav-list-nilai').removeClass('active');
+                $('#nav-list-user').removeClass('active');
+                $('#nav-dashboard').removeClass('active');
+                $('#nav-list-siswa').addClass('active');
+                break;  
+            case '/list-nilai':
+            case '/create-nilai':
+            case '/edit-nilai':
+                $('#nav-list-class').removeClass('active');
+                $('#nav-list-guru').removeClass('active');
+                $('#nav-list-mapel').removeClass('active');
+                $('#nav-list-siswa').removeClass('active');
+                $('#nav-list-user').removeClass('active');
+                $('#nav-dashboard').removeClass('active');
+                $('#nav-list-nilai').addClass('active');
+                break;  
+            case '/list-class':
+            case '/create-class':
+            case '/edit-class':
+                $('#nav-list-siswa').removeClass('active');
+                $('#nav-list-guru').removeClass('active');
+                $('#nav-list-mapel').removeClass('active');
+                $('#nav-list-nilai').removeClass('active');
+                $('#nav-list-user').removeClass('active');
+                $('#nav-dashboard').removeClass('active');
+                $('#nav-list-class').addClass('active');
+                break;
+            case '/list-mapel':
+            case '/create-mapel':
+            case '/edit-mapel':
+                $('#nav-list-class').removeClass('active');
+                $('#nav-list-guru').removeClass('active');
+                $('#nav-list-siswa').removeClass('active');
+                $('#nav-list-nilai').removeClass('active');
+                $('#nav-list-user').removeClass('active');
+                $('#nav-dashboard').removeClass('active');
+                $('#nav-list-mapel').addClass('active');
+                break;  
+            default: 
+                text = "Looking forward to the Weekend";
+        }
+    });
+</script>
   @yield('scripts')
 </body>
 
