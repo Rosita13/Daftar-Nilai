@@ -26,42 +26,17 @@
                   </tr>
                 </thead>
                 <tbody>
+                 @foreach ($subjects as $subject)
                   <tr>
-                    <td>1</td>
-                    <td>61</td>
-                    <td>IPS</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-mapel')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
+                  <td>{{ $subject->id }}</td>
+                  <td>{{ $subject->guru_id }}</td>
+                  <td>{{ $subject->name }}</td>
+                  <td>
+                   <a class="btn btn-info btn-flat"  href={{route('page.edit-class',['id' => $subject->id])}}><i class="fa fa-lg fa-edit"></i></a>
+                   <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                  </td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                  <td>62</td>
-                    <td>IPA</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-mapel')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                   <td>63</td>
-                    <td>PKN</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-mapel')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>64</td>
-                    <td>B.Ind</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-mapel')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
             </div>

@@ -21,47 +21,20 @@
                   <tr>
                     <th>Id</th>
                     <th>Guru id</th>
-                    <th>Kelas</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
+                 @foreach ($classes as $kelas)
                   <tr>
-                    <td>1</td>
-                    <td>23</td>
-                    <td>X RPL 2</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-class')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
+                  <td>{{ $kelas->id }}</td>
+                  <td>{{ $kelas->guru_id }}</td>
+                  <td>
+                   <a class="btn btn-info btn-flat"  href={{route('page.edit-class',['id' => $kelas->id])}}><i class="fa fa-lg fa-edit"></i></a>
+                   <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                  </td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>63</td>
-                     <td>X RPL 2</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-class')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>66</td>
-                     <td>X RPL 2</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-class')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>22</td>
-                     <td>X RPL 2</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-class')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
             </div>

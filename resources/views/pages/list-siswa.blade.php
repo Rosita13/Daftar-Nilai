@@ -29,54 +29,20 @@
                   </tr>
                 </thead>
                 <tbody>
+                @foreach ($students as $student)
                   <tr>
-                    <td>1</td>
-                    <td>61</td>
-                    <td>Lailatul</td>
-                    <td>XI TKJ 2</td>
-                    <td>Lailatul@gmail.com</td>
-                    <td>087654323456</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-siswa')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
+                  <td>{{ $student->id }}</td>
+                  <td>{{ $student->users_id }}</td>
+                  <td>{{ $student->name }}</td>
+                  <td>{{ $student->class }}</td>
+                  <td>{{ $student->email }}</td>
+                  <td>{{ $student->phone }}</td>
+                  <td>
+                   <a class="btn btn-info btn-flat"  href={{route('page.edit-siswa',['id' => $student->id])}}><i class="fa fa-lg fa-edit"></i></a>
+                   <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                  </td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                  <td>62</td>
-                    <td>Rosita</td>
-                    <td>XI RPL 2</td>
-                    <td>Rosita@gmail.com</td>
-                    <td>087054323456</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-siswa')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                   <td>63</td>
-                    <td>Lfira</td>
-                    <td>XI TEI 2</td>
-                    <td>Alfira@gmail.com</td>
-                    <td>087684323456</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-siswa')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                   <td>64</td>
-                    <td>Syahrul</td>
-                    <td>XI TSM 2</td>
-                    <td>Syahrul@gmail.com</td>
-                    <td>087650323456</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-siswa')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
             </div>

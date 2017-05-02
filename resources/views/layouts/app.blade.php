@@ -44,9 +44,8 @@
                 $('#nav-list-user').removeClass('active');
                 $('#nav-dashboard').addClass('active');
                 break; 
-            case '/list-user':
-            case '/create-user':
-            case '/edit-user':
+            case '/users':
+            case '/users/create':
                 $('#nav-list-class').removeClass('active');
                 $('#nav-list-guru').removeClass('active');
                 $('#nav-list-mapel').removeClass('active');
@@ -55,9 +54,8 @@
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-user').addClass('active');
                 break; 
-            case '/list-guru':
-            case '/create-guru':
-            case '/edit-guru':
+            case '/teachers':
+            case '/teachers/create':
                 $('#nav-list-class').removeClass('active');
                 $('#nav-list-mapel').removeClass('active');
                 $('#nav-list-nilai').removeClass('active');
@@ -66,9 +64,8 @@
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-guru').addClass('active');
                 break;  
-            case '/list-siswa':
-            case '/create-siswa':
-            case '/edit-siswa':
+            case '/students':
+            case '/students/create':
                 $('#nav-list-class').removeClass('active');
                 $('#nav-list-guru').removeClass('active');
                 $('#nav-list-mapel').removeClass('active');
@@ -77,9 +74,8 @@
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-siswa').addClass('active');
                 break;  
-            case '/list-nilai':
-            case '/create-nilai':
-            case '/edit-nilai':
+            case '/ values':
+            case '/values/create':
                 $('#nav-list-class').removeClass('active');
                 $('#nav-list-guru').removeClass('active');
                 $('#nav-list-mapel').removeClass('active');
@@ -88,9 +84,8 @@
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-nilai').addClass('active');
                 break;  
-            case '/list-class':
-            case '/create-class':
-            case '/edit-class':
+            case '/classes':
+            case '/classes/create':
                 $('#nav-list-siswa').removeClass('active');
                 $('#nav-list-guru').removeClass('active');
                 $('#nav-list-mapel').removeClass('active');
@@ -99,9 +94,8 @@
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-class').addClass('active');
                 break;
-            case '/list-mapel':
-            case '/create-mapel':
-            case '/edit-mapel':
+            case '/subjects':
+            case '/subjects/create':
                 $('#nav-list-class').removeClass('active');
                 $('#nav-list-guru').removeClass('active');
                 $('#nav-list-siswa').removeClass('active');

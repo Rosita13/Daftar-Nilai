@@ -45,4 +45,16 @@
       </div>
 @endsection
 @section('scripts')
+<script>
+  $(document).ready(function(){
+    // aktifkan class nav user
+    $('#nav-list-class').removeClass('active');
+    $('#nav-list-mapel').removeClass('active');
+    $('#nav-list-nilai').removeClass('active');
+    $('#nav-list-siswa').removeClass('active');
+    $('#nav-list-user').removeClass('active');
+    $('#nav-dashboard').removeClass('active');
+    $('#nav-list-guru').addClass('active');
+  });
+</script>
 @endsection

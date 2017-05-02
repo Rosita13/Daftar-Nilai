@@ -26,37 +26,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>Lailatul</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-guru')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
+                   @foreach ($teachers as $teacher)
                   <tr>
-                    <td>2</td>
-                    <td>Rosita</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-guru')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
+                  <td>{{ $teacher->id }}</td>
+                  <td>{{ $teacher->name }}</td>
+                  <td>
+                   <a class="btn btn-info btn-flat"  href={{route('page.edit-guru',['id' => $teacher->id])}}><i class="fa fa-lg fa-edit"></i></a>
+                   <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                  </td>
                   </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Alfira</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-guru')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>Syahrul</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-guru')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
+                  @endforeach
+                    
                 </tbody>
               </table>
             </div>

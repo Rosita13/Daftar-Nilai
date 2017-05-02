@@ -19,7 +19,7 @@
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>Id</th>
+                    <th>User id</th>
                     <th>Kode Guru</th>
                     <th>Nama</th>
                     <th>Email</th>
@@ -28,50 +28,19 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach ($users as $user)
                   <tr>
-                    <td>1</td>
-                    <td>61</td>
-                    <td>Lailatul</td>
-                    <td>Lailatul@gmail.com</td>
-                    <td>083245678998</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-user')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
+                  <td>{{ $user->id }}</td>
+                  <td>{{ $user->guru_id }}</td>
+                  <td>{{ $user->name }}</td>
+                  <td>{{ $user->email }}</td>
+                  <td>{{ $user->phone }}</td>
+                  <td>
+                   <a class="btn btn-info btn-flat"  href={{route('page.edit-user',['id' => $user->id])}}><i class="fa fa-lg fa-edit"></i></a>
+                   <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                  </td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>63</td>
-                    <td>Rosita</td>
-                    <td>Rosita@gmail.com</td>
-                    <td>085765432876</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-user')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>66</td>
-                    <td>Alfira</td>
-                    <td>Alfira@gmail.com</td>
-                    <td>087567432187</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-user')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>22</td>
-                    <td>Syahrul</td>
-                    <td>Syahrul@gmail.com</td>
-                    <td>087789054321</td>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-user')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
             </div>
