@@ -21,7 +21,6 @@
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>Id</th>
                     <th>Nama Siswa</th>
                     <th>Kelas</th>
                     <th>Mapel</th>
@@ -33,62 +32,21 @@
                   </tr>
                 </thead>
                 <tbody>
+                 @foreach ($values as $value)
                   <tr>
-                    <td>1</td>
-                    <td>Lailatul</td>
-                    <td>XI TKJ 2</td>
-                    <td>IPA</td>
-                    <td>UTS Ganjil</td>
-                    <td>67</td>
-                    <td>Remidi</td>
-                    <th>1</th>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-nilai')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
+                  <td>{{ $value->name }}</td>
+                  <td>{{ $value->class }}</td>
+                  <td>{{ $value->mapel }}</td>
+                  <td>{{ $value->type }}</td>
+                  <td>{{ $value->nilai }}</td>
+                  <td>{{ $value->status }}</td>
+                  <td>{{ $value->semester }}</td>
+                  <td>
+                   <a class="btn btn-info btn-flat"  href={{route('page.edit-guru',['id' => $value->id])}}><i class="fa fa-lg fa-edit"></i></a>
+                   <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                  </td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Rosita</td>
-                    <td>XI RPL 2</td>
-                    <td>IPA</td>
-                    <td>UTS Ganjil</td>
-                    <td>75</td>
-                    <td>Lolos</td>
-                    <th>1</th>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-nilai')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Alfira</td>
-                    <td>XI TEI 2</td>
-                    <td>IPA</td>
-                    <td>UTS Ganjil</td>
-                    <td>77</td>
-                    <td>Lolos</td>
-                    <th>1</th>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-nilai')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>Syahrul</td>
-                    <td>XI TSM 2</td>
-                    <td>IPA</td>
-                    <td>UTS Ganjil</td>
-                    <td>68</td>
-                    <td>Remidi</td>
-                    <th>1</th>
-                    <td>
-                      <a class="btn btn-info btn-flat" href={{route('page.edit-nilai')}}><i class="fa fa-lg fa-edit"></i></a>
-                      <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
-                    </td>
-                  </tr>
+                  @endforeach
                 </tbody>
               </table>
             </div>

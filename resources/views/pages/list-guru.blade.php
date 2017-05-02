@@ -19,7 +19,6 @@
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>Id</th>
                     <th>Nama</th>
                     <th>Aksi</th>
                   </tr>
@@ -28,7 +27,6 @@
                   <tr>
                    @foreach ($teachers as $teacher)
                   <tr>
-                  <td>{{ $teacher->id }}</td>
                   <td>{{ $teacher->name }}</td>
                   <td>
                    <a class="btn btn-info btn-flat"  href={{route('page.edit-guru',['id' => $teacher->id])}}><i class="fa fa-lg fa-edit"></i></a>

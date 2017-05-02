@@ -19,7 +19,6 @@
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>Id</th>
                     <th>Guru id</th>
                     <th>Mata Pelajaran</th>
                     <th>Aksi</th>
@@ -28,7 +27,6 @@
                 <tbody>
                  @foreach ($subjects as $subject)
                   <tr>
-                  <td>{{ $subject->id }}</td>
                   <td>{{ $subject->guru_id }}</td>
                   <td>{{ $subject->name }}</td>
                   <td>

@@ -19,7 +19,6 @@
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>Id</th>
                     <th>Guru id</th>
                     <th>Aksi</th>
                   </tr>
@@ -27,7 +26,6 @@
                 <tbody>
                  @foreach ($classes as $kelas)
                   <tr>
-                  <td>{{ $kelas->id }}</td>
                   <td>{{ $kelas->guru_id }}</td>
                   <td>
                    <a class="btn btn-info btn-flat"  href={{route('page.edit-class',['id' => $kelas->id])}}><i class="fa fa-lg fa-edit"></i></a>

@@ -27,7 +27,7 @@ class TeacherCreateRequest extends Request
      * @var array
      */
     protected $attrs = [
-          'name'    => 'name'
+          'name'    => 'Name'
     ];
 
     /**
