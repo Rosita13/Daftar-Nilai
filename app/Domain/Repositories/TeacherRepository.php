@@ -59,6 +59,7 @@ class  TeacherRepository extends AbstractRepository implements TeacherInterface,
         // execute sql insert
         return parent::create([
                'name'    => e($data['name']),
+               'nip'    => e($data['nip'])
         ]);
 
     }
@@ -72,6 +73,8 @@ class  TeacherRepository extends AbstractRepository implements TeacherInterface,
     {
         return parent::update($id, [
             'name'    => e($data['name']),
+            'nip'    => e($data['nip'])
+
         ]);
     }
 

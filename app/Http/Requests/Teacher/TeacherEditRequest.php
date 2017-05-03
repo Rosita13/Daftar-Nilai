@@ -27,7 +27,9 @@ class TeacherEditRequest extends Request
      * @var array
      */
     protected $attrs = [
-         'name'    => 'name'
+         'name'    => 'name',
+         'nip'    => 'Nip'
+
     ];
 
     /**
@@ -38,7 +40,9 @@ class TeacherEditRequest extends Request
     public function rules()
     {
         return [
-               'name'    => 'required|max:225'
+               'name'    => 'required|max:225',
+               'nip'    => 'required|max:225'
+
              
         ];
     }

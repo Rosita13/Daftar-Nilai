@@ -29,6 +29,12 @@
                           <input class="form-control" type="text" placeholder="Nama">
                         </div>
                       </div>
+                       <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputNama">Nip</label>
+                        <div class="col-lg-10">
+                          <input class="form-control" type="text" placeholder="Nama">
+                        </div>
+                      </div>
                       <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                          <a class="btn btn-primary submit" href="#signup">Edit</a>

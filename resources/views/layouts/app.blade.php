@@ -30,6 +30,19 @@
 <script src={{asset('js/bootstrap.min.js')}}></script>
 <script src={{asset('js/plugins/pace.min.js')}}></script>
 <script src={{asset('js/main.js')}}></script>
+<script type="text/javascript" src={{asset('js/plugins/bootstrap-notify.min.js')}}></script>
+    <script type="text/javascript" src={{asset('js/plugins/sweetalert.min.js')}}></script>
+    <script type="text/javascript">
+      $('#demoNotify').click(function(){
+      	$.notify({
+      		title: "Update Complete : ",
+      		message: "Something cool is just updated!",
+      		icon: 'fa fa-check' 
+      	},{
+      		type: "info"
+      	});
+      });
+      </script>
 <script>
     $(document).ready(function(){
         var pathname = window.location.pathname;

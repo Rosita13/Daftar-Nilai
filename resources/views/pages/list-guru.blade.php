@@ -20,6 +20,7 @@
                 <thead>
                   <tr>
                     <th>Nama</th>
+                    <th>NIP</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
@@ -28,6 +29,7 @@
                    @foreach ($teachers as $teacher)
                   <tr>
                   <td>{{ $teacher->name }}</td>
+                  <td>{{ $teacher->nip }}</td>
                   <td>
                    <a class="btn btn-info btn-flat"  href={{route('page.edit-guru',['id' => $teacher->id])}}><i class="fa fa-lg fa-edit"></i></a>
                    <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>

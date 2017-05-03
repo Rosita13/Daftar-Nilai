@@ -37,6 +37,12 @@
                           <input class="form-control" name="name" type="text" placeholder="Nama">
                         </div>
                       </div>
+                       <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputNama">NIP</label>
+                        <div class="col-lg-10">
+                          <input class="form-control" name="nip" type="text" placeholder="Nama">
+                        </div>
+                      </div>
                       <div class="form-group">
                          <div class="col-lg-10 col-lg-offset-2">
                          <button class="btn btn-default submit" id="btnSimpan">Simpan</button>

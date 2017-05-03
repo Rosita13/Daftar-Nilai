@@ -27,7 +27,8 @@ class TeacherCreateRequest extends Request
      * @var array
      */
     protected $attrs = [
-          'name'    => 'Name'
+          'name'    => 'Name',
+          'nip'    => 'Nip'
     ];
 
     /**
@@ -38,7 +39,8 @@ class TeacherCreateRequest extends Request
     public function rules()
     {
         return [
-            'name'    => 'required|max:225'
+            'name'    => 'required|max:225',
+            'nip'    => 'required|max:225'
         ];
     }
 
