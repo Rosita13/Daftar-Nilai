@@ -21,7 +21,7 @@ class TeacherController extends Controller
     public function index(Request $request)
     {
         $teachers = $this->teacher->paginate(10, $request->input('name'), $column = ['*'], '', $request->input('search'));
-        return view('pages.list-guru', ['teachers' => $teachers]); 
+        return view('pages.list-guru',compact('teachers')); 
     }
     public function create()
     {
@@ -29,6 +29,7 @@ class TeacherController extends Controller
     }
     public function edit($id)
     {
-        return view('pages.edit-guru'); 
+       $teacher = $this->teacher->findById($id);
+        return view('pages.edit-guru',compact('teacher'));  
     }
 }

@@ -34,13 +34,13 @@
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputNama">Nama</label>
                         <div class="col-lg-10">
-                          <input class="form-control" name="name" type="text" placeholder="Nama">
+                          <input class="form-control" name="name" type="text" placeholder="Nama" value="">
                         </div>
                       </div>
                        <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputNama">NIP</label>
                         <div class="col-lg-10">
-                          <input class="form-control" name="nip" type="text" placeholder="Nama">
+                          <input class="form-control" name="nip" type="text" placeholder="Nama" value="">
                         </div>
                       </div>
                       <div class="form-group">

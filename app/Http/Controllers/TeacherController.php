@@ -84,7 +84,7 @@ class TeacherController extends Controller
      *
      * @apiError EmailHasRegitered The Email must diffrerent.
      */
-    public function update(SeacherEditRequest $request, $id)
+    public function update(TeacherEditRequest $request, $id)
     {
         return $this->teacher->update($id, $request->all());
     }
