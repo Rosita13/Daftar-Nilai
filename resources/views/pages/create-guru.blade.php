@@ -44,10 +44,10 @@
                         </div>
                       </div>
                       <div class="form-group">
-                         <div class="col-lg-10 col-lg-offset-2">
-                         <button class="btn btn-default submit" id="btnSimpan">Simpan</button>
+                      <div class="col-lg-10 col-lg-offset-2">
+                      <button class="btn btn-default submit" id="btnSimpan">Simpan</button>
                       <button class="btn btn-primary submit" id="btnSimpanKembali">Simpan & Kembali</button>
-                      <a class="btn btn-default submit" route={{route('page.list-guru')}}>Kembali</a>
+                      <a class="btn btn-default submit" href={{route('page.list-guru')}}>Kembali</a>
                         </div>
                       </div>
                   </form>
