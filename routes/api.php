@@ -24,3 +24,6 @@ Route::resource('values','ValueController');
 Route::resource('classes','KelasController');
 Route::resource('subjects','SubjectController');
 Route::resource('teachers','TeacherController');
+Route::get('getList-teachers','TeacherController@getList');
+Route::get('getList-students','StudentController@getList');
+// Route::get('getList-users','UserController@getList');

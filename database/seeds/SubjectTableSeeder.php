@@ -16,12 +16,12 @@ class SubjectTableSeeder extends Seeder
         DB::table('subjects')->truncate();
 
         $subject = [
-            ['id' => 1, 'name' => 'lala','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
-            ['id' => 2, 'name' => 'lili','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
-            ['id' => 3, 'name' => 'lulu','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
-            ['id' => 4, 'name' => 'kaka','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
-            ['id' => 5, 'name' => 'kiki','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
-            ['id' => 6, 'name' => 'kuku','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
+            ['id' => 1, 'name' => 'MTK','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
+            ['id' => 2, 'name' => 'PKN','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
+            ['id' => 3, 'name' => 'B.ind','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
+            ['id' => 4, 'name' => 'PPKI','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
+            ['id' => 5, 'name' => 'IPA','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
+            ['id' => 6, 'name' => 'IPS','guru_id' => '1','created_at' => \Carbon\Carbon::now()],
         ];
 
         // insert batch

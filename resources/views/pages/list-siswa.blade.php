@@ -19,7 +19,6 @@
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>User Id</th>
                     <th>Nama</th>
                     <th>Kelas</th>
                     <th>Email</th>
@@ -30,14 +29,13 @@
                 <tbody>
                 @foreach ($students as $student)
                   <tr>
-                  <td>{{ $student->users_id }}</td>
                   <td>{{ $student->name }}</td>
                   <td>{{ $student->class }}</td>
                   <td>{{ $student->email }}</td>
                   <td>{{ $student->phone }}</td>
                   <td>
-                   <a class="btn btn-info btn-flat"  href={{route('page.edit-siswa',['id' => $student->id])}}><i class="fa fa-lg fa-edit"></i></a>
-                   <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                   <a class="btn btn-info btn-flat"href={{route('page.edit-siswa',['id' => $student->id])}}><i class="fa fa-lg fa-edit"></i></a>
+                   <a class="btn btn-warning btn-flat"onClick="deleteData('{{$student->id}}')"><i class="fa fa-lg fa-trash"></i></a>
                   </td>
                   </tr>
                   @endforeach
@@ -49,12 +47,39 @@
       </div>
 @endsection
 @section('scripts')
- <script src={{asset('js/jquery-2.1.4.min.js')}}></script>
-  <script src={{asset('js/essential-plugins.js')}}></script>
-  <script src={{asset('js/bootstrap.min.js')}}></script>
-  <script src={{asset('js/plugins/pace.min.js')}}></script>
-  <script src={{asset('js/main.js')}}></script>
-  <script type="text/javascript" src={{asset('js/plugins/jquery.dataTables.min.js')}}></script>
-  <script type="text/javascript" src={{asset('js/plugins/dataTables.bootstrap.min.js')}}></script>
-  <script type="text/javascript">$('#sampleTable').DataTable();</script>
+  <script>
+  function deleteData(studentId){
+    console.log(studentId);
+    	swal({
+      		title: "Are you sure?",
+      		text: "You will not be able to recover this imaginary file!",
+      		type: "warning",
+      		showCancelButton: true,
+      		confirmButtonText: "Yes, delete it!",
+      		cancelButtonText: "No, cancel plx!",
+      		closeOnConfirm: false,
+      		closeOnCancel: false
+    },
+    function(isConfirm){
+      if (isConfirm) {
+        // delete data using ajax
+        $.ajax({
+          url: "/api/students/" + studentId,
+          type: 'DELETE',
+          success: function( data, textStatus, jQxhr ){
+            console.log(data);
+            swal("Deleted!", "Your imaginary file has been deleted.", "success");
+          },
+          error: function( data, textStatus, jQxhr ){
+            swal("Internal Server Error", "Whooops something went wrong!", "error");
+          }
+        });
+        // reload page
+        location.reload();
+      } else {
+        swal("Cancelled", "Your imaginary file is safe :)", "error");
+      }
+    });
+  };
+</script> 
 @endsection

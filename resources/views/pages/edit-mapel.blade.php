@@ -14,19 +14,29 @@
           </ul>
         </div>
       </div>
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="alert alert-dismissible hide" id="errMsg" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <span id="errData"></span>
+              </div>
+            </div>
+          </div>
       <div class="row">
         <div class="col-md-12">
           <div class="card">
             <div class="row">
               <div class="col-lg-6">
                 <div class="well bs-component">
-                  <form class="form-horizontal">
+                   <form class="form-horizontal" id="formSubject">
+                   <input type="hidden" class="form-control" value="{{$subject->id}}">
                     <fieldset>
                       <legend>Data Mata Pelajaran</legend>
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="select">Mapel</label>
                         <div class="col-lg-10">
-                          <select class="form-control" id="select">
+                          <select class="form-control" name="name" id="select"value="{{$subject->nip}}">
                               <option>MTK</option>
                               <option>KWU</option>
                               <option>IPA</option>
@@ -48,18 +58,20 @@
                             </select><br>
                         </div>
                       </div>
-                      <div class="form-group">
+                     <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputNama">Guru</label>
                         <div class="col-lg-10">
-                          <input class="form-control"
-                           type="text" placeholder="Guru" readonly>
-                          <input class="form-control" type="hidden" placeholder="guru_id">
+                         <select name="guru_id" class="form-control" id="demoSelect">
+                          @foreach($teachers as $teacher)
+                          <option value="{{$teacher->id}}">{{$teacher->name}}</option>
+                          @endforeach
+                         </select>
                         </div>
                       </div>
                       <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
-                           <a class="btn btn-primary submit" href="#signup">Edit</a>
-                          <a class="btn btn-default submit" href={{route('page.list-mapel')}}>Kembali</a>
+                           <button class="btn btn-primary submit" id="btnUpdate">Update</button>
+                        <a class="btn btn-default submit" href={{route('page.list-mapel')}}>Kembali</a>
                         </div>
                       </div>
                     </fieldset>
@@ -84,4 +96,65 @@
       $('#nav-list-mapel').addClass('active');
   });
   </script>
+  <script>
+  $(document).ready(function(){
+       
+     });
+ 
+     // ini adalah proses submit data menggunakan Ajax
+     $("#btnUpdate").click(function(event) {
+       // kasih ini dong biar gag hard reload
+       event.preventDefault();
+       $.ajax({
+         url: '{{route("subjects.update",['id' => $subject->id])}}', // url edit data
+         dataType: 'JSON',
+         type: 'PUT',
+         contentType: 'application/x-www-form-urlencoded',
+         data: $("#formSubject").serialize(), // data tadi diserialize berdasarkan name
+         success: function( data, textStatus, jQxhr ){
+             console.log('status =>', textStatus);
+             console.log('data =>', data);
+             // clear validation error messsages
+             $('#errMsg').addClass('hide');
+             $('#errData').html('');
+             // scroll up
+             // $('html, body').animate({
+             //     scrollTop: $("#nav-top").offset().top
+             // }, 2000);
+             // tampilkan pesan sukses
+             showNotifSuccess();
+             // kembali kelist book
+             window.location.href = '{{route("page.list-mapel")}}'
+         },
+         error: function( data, textStatus, errorThrown ){
+           var messages = jQuery.parseJSON(data.responseText);
+             console.log( errorThrown );
+             // $('html, body').animate({
+             //     scrollTop: $("#nav-top").offset().top
+             // }, 2000);
+             // scroll up 
+             // tampilkan pesan error
+              $('#errData').html('');
+           $('#errMsg').addClass('alert-warning');
+           $('#errMsg').removeClass('hide');
+           $.each(messages, function(i, val) {
+             $('#errData').append('<p>'+ i +' : ' + val +'</p>')
+             console.log(i,val);
+           });          
+           // jangan clear data
+         }
+       });
+     });
+     
+     function showNotifSuccess(){
+     	$.notify({
+             icon: 'pe-7s-checklist',
+             message: "Edit Data Mata Pelajaran berhasil disimpan."
+         }, {
+                 type: 'success',
+                 timer: 4000
+             });
+ 	  }
+         $('#demoSelect').select2();
+ </script>
 @endsection

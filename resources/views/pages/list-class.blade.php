@@ -20,6 +20,7 @@
                 <thead>
                   <tr>
                     <th>Guru id</th>
+                    <th>Kelas</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
@@ -27,9 +28,10 @@
                  @foreach ($classes as $kelas)
                   <tr>
                   <td>{{ $kelas->guru_id }}</td>
+                  <td>{{ $kelas->class}}</td>
                   <td>
-                   <a class="btn btn-info btn-flat"  href={{route('page.edit-class',['id' => $kelas->id])}}><i class="fa fa-lg fa-edit"></i></a>
-                   <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                   <a class="btn btn-info btn-flat"href={{route('page.edit-class',['id' => $kelas->id])}}><i class="fa fa-lg fa-edit"></i></a>
+                   <a class="btn btn-warning btn-flat"onClick="deleteData('{{$kelas->id}}')"><i class="fa fa-lg fa-trash"></i></a>
                   </td>
                   </tr>
                   @endforeach
@@ -41,12 +43,39 @@
       </div>
 @endsection
 @section('scripts')
-<script src={{asset('js/jquery-2.1.4.min.js')}}></script>
-  <script src={{asset('js/essential-plugins.js')}}></script>
-  <script src={{asset('js/bootstrap.min.js')}}></script>
-  <script src={{asset('js/plugins/pace.min.js')}}></script>
-  <script src={{asset('js/main.js')}}></script>
-  <script type="text/javascript" src={{asset('js/plugins/jquery.dataTables.min.js')}}></script>
-  <script type="text/javascript" src={{asset('js/plugins/dataTables.bootstrap.min.js')}}></script>
-  <script type="text/javascript">$('#sampleTable').DataTable();</script>
+  <script>
+  function deleteData(kelasId){
+    console.log(kelasId);
+    	swal({
+      		title: "Are you sure?",
+      		text: "You will not be able to recover this imaginary file!",
+      		type: "warning",
+      		showCancelButton: true,
+      		confirmButtonText: "Yes, delete it!",
+      		cancelButtonText: "No, cancel plx!",
+      		closeOnConfirm: false,
+      		closeOnCancel: false
+    },
+    function(isConfirm){
+      if (isConfirm) {
+        // delete data using ajax
+        $.ajax({
+          url: "/api/classes/" + kelasId,
+          type: 'DELETE',
+          success: function( data, textStatus, jQxhr ){
+            console.log(data);
+            swal("Deleted!", "Your imaginary file has been deleted.", "success");
+          },
+          error: function( data, textStatus, jQxhr ){
+            swal("Internal Server Error", "Whooops something went wrong!", "error");
+          }
+        });
+        // reload page
+        location.reload();
+      } else {
+        swal("Cancelled", "Your imaginary file is safe :)", "error");
+      }
+    });
+  };
+</script> 
 @endsection

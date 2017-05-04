@@ -29,7 +29,10 @@ class ValueEditRequest extends Request
     protected $attrs = [
          'siswa_id'    => 'siswa_id',
          'type'    => 'type',
-        'status'   => 'status'
+        'status'   => 'status',
+        'nilai'   => 'nilai',
+        'semester'=> 'semester',
+        'mapel_id'   => 'mapel_id'
     ];
 
     /**
@@ -40,9 +43,12 @@ class ValueEditRequest extends Request
     public function rules()
     {
         return [
-               'siswa_id'    => 'required|max:225',
-             'type'    => 'required|max:225',
-            'status' => 'required|max:60'
+        'siswa_id'=> 'required|max:225',
+        'type'    => 'required|max:225',
+        'status'  => 'required|max:60',
+        'nilai'   => 'required|max:60',
+        'semester'=> 'required|max:60',
+        'mapel_id'=> 'required|max:60'
         ];
     }
 

@@ -104,5 +104,8 @@ class SubjectController extends Controller
     {
         return $this->subject->delete($id);
     }
-
+public function getList()
+    {
+        return $this->kelas->getList();
+    }
 }

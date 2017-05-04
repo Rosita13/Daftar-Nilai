@@ -59,6 +59,7 @@ class KelasRepository extends AbstractRepository implements KelasInterface, Crud
         // execute sql insert
         return parent::create([
             'guru_id'    => e($data['guru_id']),
+            'class'    => e($data['class']),
         ]);
 
     }
@@ -72,6 +73,8 @@ class KelasRepository extends AbstractRepository implements KelasInterface, Crud
     {
         return parent::update($id, [
             'guru_id'    => e($data['guru_id']),
+            'class'    => e($data['class']),
+
         ]);
     }
 
@@ -94,5 +97,17 @@ class KelasRepository extends AbstractRepository implements KelasInterface, Crud
     {
         return parent::find($id, $columns);
     }
+public function getList()
+    {
+        // query to aql
+        $akun = $this->model->all();
+        // if data null
+        if (null == $akun) {
+            // set response header not found
+            return $this->errorNotFound('Data belum tersedia');
+        }
 
+        return $akun;
+
+    }
 }

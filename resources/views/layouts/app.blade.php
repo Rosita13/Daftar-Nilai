@@ -32,6 +32,7 @@
 <script src={{asset('js/main.js')}}></script>
 <script type="text/javascript" src={{asset('js/plugins/bootstrap-notify.min.js')}}></script>
 <script type="text/javascript" src={{asset('js/plugins/sweetalert.min.js')}}></script>
+ <script type="text/javascript" src={{asset('js/plugins/select2.min.js')}}></script>
 <script>
     $(document).ready(function(){
         var pathname = window.location.pathname;

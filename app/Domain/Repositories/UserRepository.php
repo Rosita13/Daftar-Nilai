@@ -59,11 +59,11 @@ class UserRepository extends AbstractRepository implements UserInterface, Crudab
         // execute sql insert
         return parent::create([
             'name'    => e($data['name']),
-            'class'    => e($data['class']),
+            // 'class'    => e($data['class']),
             'email'   => e($data['email']),
             'phone'   => e($data['phone']),
             'password' => e($data['password']),
-             'guru_id' => e($data['guru_id']),
+            //  'guru_id' => e($data['guru_id']),
         ]);
 
     }
@@ -77,11 +77,11 @@ class UserRepository extends AbstractRepository implements UserInterface, Crudab
     {
         return parent::update($id, [
             'name'    => e($data['name']),
-            'class'    => e($data['class']),
+            // 'class'    => e($data['class']),
             'email'   => e($data['email']),
             'phone'   => e($data['phone']),
             'password' => e($data['password']),
-             'guru_id' => e($data['guru_id']),
+            //  'guru_id' => e($data['guru_id']),
         ]);
     }
 
@@ -104,5 +104,17 @@ class UserRepository extends AbstractRepository implements UserInterface, Crudab
     {
         return parent::find($id, $columns);
     }
+    // public function getList()
+    // {
+    //     // query to aql
+    //     $akun = $this->model->get()->toArray();
+    //     // if data null
+    //     if (null == $akun) {
+    //         // set response header not found
+    //         return $this->errorNotFound('Data belum tersedia');
+    //     }
 
+    //     return $akun;
+
+    // }
 }

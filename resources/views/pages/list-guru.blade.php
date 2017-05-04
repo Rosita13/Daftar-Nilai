@@ -45,15 +45,6 @@
       </div>
 @endsection
 @section('scripts')
-<script src={{asset('js/jquery-2.1.4.min.js')}}></script>
-  <script src={{asset('js/essential-plugins.js')}}></script>
-  <script src={{asset('js/bootstrap.min.js')}}></script>
-  <script src={{asset('js/plugins/pace.min.js')}}></script>
-  <script src={{asset('js/main.js')}}></script>
-  <script type="text/javascript" src={{asset('js/plugins/jquery.dataTables.min.js')}}></script>
-  <script type="text/javascript" src={{asset('js/plugins/dataTables.bootstrap.min.js')}}></script>
-  <script type="text/javascript">$('#sampleTable').DataTable();
-</script>
 <script>
   function deleteData(teacherId){
     console.log(teacherId);

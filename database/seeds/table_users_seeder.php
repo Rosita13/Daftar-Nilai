@@ -1,9 +1,8 @@
 <?php
 
-
 use Illuminate\Database\Seeder;
 
-class UserTableSeeder extends Seeder
+class table_users_seeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -31,7 +31,7 @@ class StudentEditRequest extends Request
          'class'    => 'class',
         'email'   => 'Email',
         'phone'   => 'Phone',
-        'users_id' => 'users_id'
+        // 'users_id' => 'users_id'
     ];
 
     /**
@@ -46,7 +46,7 @@ class StudentEditRequest extends Request
              'class'    => 'required|max:225',
             'email'   => 'required|email|unique:contacts,email|max:225',
             'phone'   => 'required|max:30',
-            'users_id' => 'required|max:60'
+            // 'users_id' => 'required|max:60'
         ];
     }
 

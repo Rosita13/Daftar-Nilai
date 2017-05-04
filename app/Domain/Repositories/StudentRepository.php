@@ -63,7 +63,7 @@ class StudentRepository extends AbstractRepository implements StudentInterface, 
             'class'    => e($data['class']),
             'email'   => e($data['email']),
             'phone'   => e($data['phone']),
-            'users_id' => e($data['users_id'])
+            'users_id' =>'1'
         ]);
 
     }
@@ -80,7 +80,7 @@ class StudentRepository extends AbstractRepository implements StudentInterface, 
             'class'    => e($data['class']),
             'email'   => e($data['email']),
             'phone'   => e($data['phone']),
-            'users_id' => e($data['users_id'])
+            'users_id' =>'1'
         ]);
     }
 
@@ -103,5 +103,17 @@ class StudentRepository extends AbstractRepository implements StudentInterface, 
     {
         return parent::find($id, $columns);
     }
+ public function getList()
+    {
+        // query to aql
+        $akun = $this->model->all();
+        // if data null
+        if (null == $akun) {
+            // set response header not found
+            return $this->errorNotFound('Data belum tersedia');
+        }
 
+        return $akun;
+
+    }
 }

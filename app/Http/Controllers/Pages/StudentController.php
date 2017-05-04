@@ -21,7 +21,7 @@ class StudentController extends Controller
     public function index(Request $request)
     {
         $students = $this->student->paginate(10, $request->input('name'), $column = ['*'], '', $request->input('search'));
-        return view('pages.list-siswa', ['students' => $students]); 
+        return view('pages.list-siswa', compact('students')); 
     }
     public function create()
     {
@@ -29,6 +29,7 @@ class StudentController extends Controller
     }
     public function edit($id)
     {
-        return view('pages.edit-siswa'); 
+        $student = $this->student->findById($id);
+        return view('pages.edit-siswa',compact('student'));  
     }
 }

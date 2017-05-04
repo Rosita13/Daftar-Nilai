@@ -104,5 +104,8 @@ class StudentController extends Controller
     {
         return $this->student->delete($id);
     }
-
+ public function getList()
+    {
+        return $this->student->getList();
+    }
 }

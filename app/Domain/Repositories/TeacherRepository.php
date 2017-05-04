@@ -11,7 +11,7 @@ use App\Domain\Contracts\Crudable;
  * Teacher TeacherRepository
  * @package App\Domain\Repositories
  */
-class  TeacherRepository extends AbstractRepository implements TeacherInterface, Crudable
+class TeacherRepository extends AbstractRepository implements TeacherInterface, Crudable
 {
 
     /**
@@ -97,5 +97,17 @@ class  TeacherRepository extends AbstractRepository implements TeacherInterface,
     {
         return parent::find($id, $columns);
     }
+  public function getList()
+    {
+        // query to aql
+        $akun = $this->model->all();
+        // if data null
+        if (null == $akun) {
+            // set response header not found
+            return $this->errorNotFound('Data belum tersedia');
+        }
 
+        return $akun;
+
+    }
 }

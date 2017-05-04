@@ -96,5 +96,17 @@ class  SubjectRepository extends AbstractRepository implements SubjectInterface,
     {
         return parent::find($id, $columns);
     }
+public function getList()
+    {
+        // query to aql
+        $akun = $this->model->all();
+        // if data null
+        if (null == $akun) {
+            // set response header not found
+            return $this->errorNotFound('Data belum tersedia');
+        }
 
+        return $akun;
+
+    }
 }

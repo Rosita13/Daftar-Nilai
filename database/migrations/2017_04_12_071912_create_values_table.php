@@ -18,6 +18,10 @@ class CreateValuesTable extends Migration
             $table->integer('siswa_id' , false);
             $table->string('type');
             $table->string('status');
+            $table->integer('nilai');
+            $table->string('semester');
+            $table->integer('mapel_id', false);
+            $table->integer('class_id', false);
             $table->timestamps();
             $table->softDeletes();
         });

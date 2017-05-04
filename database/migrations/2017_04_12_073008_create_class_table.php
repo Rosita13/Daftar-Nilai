@@ -16,6 +16,7 @@ class CreateClassTable extends Migration
           Schema::create('classes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('guru_id' , false);
+            $table->string('class');
             $table->timestamps();
             $table->softDeletes();
         });

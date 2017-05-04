@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Pages;
 use App\Http\Requests\lass\KelasCreateRequest;
 use Illuminate\Http\Request;
 use App\Domain\Repositories\KelasRepository;
+use App\Domain\Repositories\TeacherRepository;
 use App\Http\Controllers\Controller;
 class KelasController extends Controller
 {
@@ -10,13 +11,16 @@ class KelasController extends Controller
      * @var KelasInterface
      */
     protected $kelas;
+    protected $teacher;
+
     /**
      * KelasController constructor.
      * @param KelasInterface $kelas
      */
-    public function __construct(KelasRepository $kelas)
+    public function __construct(KelasRepository $kelas,TeacherRepository $teacher)
     {
         $this->kelas = $kelas;
+        $this->teacher = $teacher;
     }
     public function index(Request $request)
     {
@@ -25,10 +29,12 @@ class KelasController extends Controller
     }
     public function create()
     {
-        return view('pages.create-class'); 
+        $teachers = $this->teacher->getList();
+        return view('pages.create-class',compact('teachers'));
     }
     public function edit($id)
     {
-        return view('pages.edit-class'); 
+       $teachers = $this->teacher->getList();
+        return view('pages.create-class',compact('teachers'));
     }
 }

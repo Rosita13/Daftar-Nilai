@@ -21,7 +21,7 @@ class UserController extends Controller
     public function index(Request $request)
     {
         $users = $this->user->paginate(10, $request->input('name'), $column = ['*'], '', $request->input('search'));
-        return view('pages.list-user', ['users' => $users]); 
+        return view('pages.list-user',compact('users'));  
     }
     public function create()
     {
@@ -29,6 +29,7 @@ class UserController extends Controller
     }
     public function edit($id)
     {
-        return view('pages.edit-user'); 
+       $user = $this->user->findById($id);
+        return view('pages.edit-user',compact('user'));  
     }
 }

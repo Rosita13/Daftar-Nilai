@@ -18,13 +18,21 @@ class Value extends Model
      */
       protected $table = 'values';
     protected $fillable = [
-        'siswa_id', 'type', 'status'
+        'siswa_id', 'type', 'status','nilai','semester','mapel_id','class_id'
     ];
 
-     protected $with = ['student'];
+     protected $with = ['student','subject','kelas'];
     public function student()
     {
-        return $this->belongsTo('App\Domain\Entities\student', 'siswa_id');
+        return $this->belongsTo('App\Domain\Entities\Student', 'siswa_id');
+    }
+      public function subject()
+    {
+        return $this->belongsTo('App\Domain\Entities\Subject', 'mapel_id');
+    }
+      public function kelas()
+    {
+        return $this->belongsTo('App\Domain\Entities\Kelas', 'class_id');
     }
 
 }

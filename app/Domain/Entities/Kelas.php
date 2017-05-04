@@ -18,7 +18,7 @@ class Kelas extends Model
      */
     protected $table = 'classes';
     protected $fillable = [
-        'guru_id'
+        'guru_id','class'
     ];
     
      protected $with = ['teacher'];

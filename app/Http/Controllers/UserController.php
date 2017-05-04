@@ -104,5 +104,8 @@ class UserController extends Controller
     {
         return $this->user->delete($id);
     }
-
+    // public function getList()
+    // {
+    //     return $this->user->getList();
+    // }
 }

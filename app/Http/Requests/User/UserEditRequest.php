@@ -43,8 +43,8 @@ class UserEditRequest extends Request
     public function rules()
     {
         return [
-       'name'    => 'required|max:225',
-             'class'    => 'required|max:225',
+            'name'    => 'required|max:225',
+            'class'    => 'required|max:225',
             'email'   => 'required|email|unique:contacts,email|max:225',
             'phone'   => 'required|max:30',
             'password' => 'required|max:60',

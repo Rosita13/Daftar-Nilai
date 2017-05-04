@@ -16,12 +16,12 @@ class KelasTableSeeder extends Seeder
         DB::table('classes')->truncate();
 
         $kelas = [
-            ['id' => 1, 'guru_id' => '1', 'created_at' => \Carbon\Carbon::now()],
-            ['id' => 2, 'guru_id' => '2', 'created_at' => \Carbon\Carbon::now()],
-            ['id' => 3, 'guru_id' => '3', 'created_at' => \Carbon\Carbon::now()],
-            ['id' => 4, 'guru_id' => '4',  'created_at' => \Carbon\Carbon::now()],
-            ['id' => 5, 'guru_id' => '5',  'created_at' => \Carbon\Carbon::now()],
-            ['id' => 6, 'guru_id' => '6', 'created_at' => \Carbon\Carbon::now()],
+            ['id' => 1, 'guru_id' => '1','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
+            ['id' => 2, 'guru_id' => '2','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
+            ['id' => 3, 'guru_id' => '3','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
+            ['id' => 4, 'guru_id' => '4','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
+            ['id' => 5, 'guru_id' => '5','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
+            ['id' => 6, 'guru_id' => '6','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
         ];
 
         // insert batch

@@ -17,14 +17,14 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'name','class','email', 'phone','password','guru_id'
+        'name','class','email', 'phone','password'//,'guru_id'
     ];
 
-    protected $with = ['teacher'];
-    public function teacher()
-    {
-        return $this->belongsTo('App\Domain\Entities\Teacher', 'guru_id');
-    }
+    // protected $with = ['teacher'];
+    // public function teacher()
+    // {
+    //     return $this->belongsTo('App\Domain\Entities\Teacher', 'guru_id');
+    // }
     
 
     
