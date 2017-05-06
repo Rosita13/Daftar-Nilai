@@ -17,6 +17,5 @@ $factory->define(App\Domain\Entities\Contact::class, function (Faker\Generator $
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'phone' => $faker->phoneNumber,
-        'address' => $faker->address
     ];
 });

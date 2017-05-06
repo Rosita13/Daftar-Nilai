@@ -10,8 +10,15 @@
           </ul>
         </div>
         <div><a class="btn btn-primary btn-flat" href={{route('page.create-guru')}}><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
-            href="#"><i class="fa fa-lg fa-refresh"></i></a><a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a></div>
+           href={{route('page.list-guru')}}><i class="fa fa-lg fa-refresh"></i></a><a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a></div>
       </div>
+      <div class="col-md-4 pull-right">
+        <form method="GET" action="{{route('page.list-guru')}}"> 
+          <div class="form-group">
+              <input type="text" class="form-control" name="search" placeholder="Pencarian..." value="">
+          </div>
+        </form>
+        </div>
       <div class="row">
         <div class="col-md-12">
           <div class="card">
