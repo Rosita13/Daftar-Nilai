@@ -49,6 +49,10 @@
           </div>
         </div>
       </div>
+       <div class="col-md-12 text-center">
+      <!--pagination-->
+      {{$classes->links()}}
+    </div>
 @endsection
 @section('scripts')
   <script>
