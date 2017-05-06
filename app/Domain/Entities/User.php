@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Class Contact
  * @package App\Domain\Entities
  */
-class User extends Model
+class User extends Entities
 {
     use SoftDeletes;
 
@@ -17,9 +17,10 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'name','class','email', 'phone','password'//,'guru_id'
+        'name','email', 'phone','password'//,'guru_id'
     ];
 
+    protected $primaryKey = 'id';
     // protected $with = ['teacher'];
     // public function teacher()
     // {

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Class Subjects
  * @package App\Domain\Entities
  */
-class Subject extends Model
+class Subject extends Entities
 {
     use SoftDeletes;
 
@@ -20,6 +20,7 @@ class Subject extends Model
     protected $fillable = [
         'name','guru_id'
     ];
+     protected $primaryKey = 'id';
 
      protected $with = ['teacher'];
     public function teacher()

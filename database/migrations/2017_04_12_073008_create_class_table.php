@@ -14,11 +14,12 @@ class CreateClassTable extends Migration
     public function up()
     {
           Schema::create('classes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->string('id');
             $table->integer('guru_id' , false);
             $table->string('class');
             $table->timestamps();
             $table->softDeletes();
+            $table->primary('id');
         });
     }
 

@@ -14,7 +14,7 @@ class CreateValuesTable extends Migration
     public function up()
     {
      Schema::create('values', function (Blueprint $table) {
-            $table->increments('id');
+            $table->string('id');
             $table->integer('siswa_id' , false);
             $table->string('type');
             $table->string('status');
@@ -24,6 +24,7 @@ class CreateValuesTable extends Migration
             $table->integer('class_id', false);
             $table->timestamps();
             $table->softDeletes();
+            $table->primary('id');
         });
     }
 

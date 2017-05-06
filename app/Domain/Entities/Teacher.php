@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Class Teachers
  * @package App\Domain\Entities
  */
-class Teacher extends Model
+class Teacher extends Entities
 {
     use SoftDeletes;
 
@@ -20,5 +20,6 @@ class Teacher extends Model
     protected $fillable = [
         'name','nip'
     ];
+     protected $primaryKey = 'id';
 
 }

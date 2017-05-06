@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Class Classes
  * @package App\Domain\Entities
  */
-class Kelas extends Model
+class Kelas extends Entities
 {
     use SoftDeletes;
 
@@ -20,6 +20,7 @@ class Kelas extends Model
     protected $fillable = [
         'guru_id','class'
     ];
+     protected $primaryKey = 'id';
     
      protected $with = ['teacher'];
     public function teacher()

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Class Student
  * @package App\Domain\Entities
  */
-class Value extends Model
+class Value extends Entities
 {
     use SoftDeletes;
 
@@ -20,7 +20,7 @@ class Value extends Model
     protected $fillable = [
         'siswa_id', 'type', 'status','nilai','semester','mapel_id','class_id'
     ];
-
+     protected $primaryKey = 'id';
      protected $with = ['student','subject','kelas'];
     public function student()
     {
