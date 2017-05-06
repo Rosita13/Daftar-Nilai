@@ -47,6 +47,7 @@ class ValueController extends Controller
       $classes = $this->class->getList();
       $subjects = $this->subject->getList();
       $arr= [$students,$classes,$subjects];
-    return view('pages.create-nilai',compact('students','classes','subjects',$arr));
+      $value = $this->value->findById($id);
+    return view('pages.edit-nilai',compact('students','classes','subjects','value',$arr));
     }
 }

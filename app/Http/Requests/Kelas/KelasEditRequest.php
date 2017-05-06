@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Class;
+namespace App\Http\Requests\Kelas;
 
 use App\Http\Requests\Request;
 
@@ -9,7 +9,7 @@ use App\Http\Requests\Request;
  *
  * @package App\Http\Requests\User
  */
-class ClassEditRequest extends Request
+class KelasEditRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,7 +27,7 @@ class ClassEditRequest extends Request
      * @var array
      */
     protected $attrs = [
-         'guru_id'  => 'guru_id'
+         'guru_id'  => 'guru_id',
          'class'    => 'class'
     ];
 
@@ -39,7 +39,7 @@ class ClassEditRequest extends Request
     public function rules()
     {
         return [
-        'guru_id'    => 'required|max:225'
+        'guru_id'    => 'required|max:225',
         'class'    => 'required|max:225'
              
         ];

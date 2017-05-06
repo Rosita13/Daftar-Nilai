@@ -4,7 +4,7 @@
        <div class="page-title">
         <div>
           <h1><i class="fa fa-edit"></i> Edit Siswa</h1>
-          <p>Input Sebagai Identitas Siswa</p>
+          <p>Edit Siswa</p>
         </div>
         <div>
           <ul class="breadcrumb">

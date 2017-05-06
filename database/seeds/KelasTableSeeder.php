@@ -17,10 +17,10 @@ class KelasTableSeeder extends Seeder
 
         $kelas = [
             ['id' => 1, 'guru_id' => '1','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
-            ['id' => 2, 'guru_id' => '2','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
-            ['id' => 3, 'guru_id' => '3','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
-            ['id' => 4, 'guru_id' => '4','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
-            ['id' => 5, 'guru_id' => '5','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
+            ['id' => 2, 'guru_id' => '2','class'=>'TKJ', 'created_at' => \Carbon\Carbon::now()],
+            ['id' => 3, 'guru_id' => '3','class'=>'TEI', 'created_at' => \Carbon\Carbon::now()],
+            ['id' => 4, 'guru_id' => '4','class'=>'TSM', 'created_at' => \Carbon\Carbon::now()],
+            ['id' => 5, 'guru_id' => '5','class'=>'TKR', 'created_at' => \Carbon\Carbon::now()],
             ['id' => 6, 'guru_id' => '6','class'=>'RPL', 'created_at' => \Carbon\Carbon::now()],
         ];
 

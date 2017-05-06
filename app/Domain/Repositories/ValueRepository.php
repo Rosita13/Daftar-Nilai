@@ -63,7 +63,7 @@ class ValueRepository extends AbstractRepository implements ValueInterface, Crud
             'status'  => e($data['status']),
             'nilai'   => e($data['nilai']),
             'semester'=> e($data['semester']),
-            'mapel_id'   => e($data['mapel_id']),
+            'mapel_id'=> e($data['mapel_id']),
             'class_id'   => e($data['class_id'])
         ]);
 
@@ -82,8 +82,8 @@ class ValueRepository extends AbstractRepository implements ValueInterface, Crud
             'status'  => e($data['status']),
             'nilai'   => e($data['nilai']),
             'semester'=> e($data['semester']),
-            'mapel_id'   => e($data['mapel_id']),
-            'class_id'   => e($data['class_id'])
+            'mapel_id'=> e($data['mapel_id']),
+            'class_id'=> e($data['class_id'])
         ]);
     }
 

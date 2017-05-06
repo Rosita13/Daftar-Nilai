@@ -4,7 +4,7 @@
         <div class="page-title">
         <div>
           <h1><i class="fa fa-edit"></i> Create User</h1>
-          <p>Input Sebagai Identitas User</p>
+          <p>Input User</p>
         </div>
         <div>
           <ul class="breadcrumb">
@@ -97,6 +97,7 @@
             // }, 2000);
             // tampilkan pesan sukses
             showNotifSuccess();
+            window.location.href = '{{route("page.list-user")}}'
             // clear data inputan
             $('#formUser').find("input[type=text], textarea").val("");
             // kembali kelist book

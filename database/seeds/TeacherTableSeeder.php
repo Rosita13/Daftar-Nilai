@@ -16,12 +16,12 @@ class TeacherTableSeeder extends Seeder
         DB::table('teachers')->truncate();
 
         $teacher = [
-            ['id' => 1, 'name' => 'lala', 'nip' => 11111111 ,'created_at'=> \Carbon\Carbon::now()],
-            ['id' => 2, 'name' => 'lili', 'nip' => 11111112 ,'created_at'=> \Carbon\Carbon::now()],
-            ['id' => 3, 'name' => 'lulu', 'nip' => 11111113 ,'created_at'=> \Carbon\Carbon::now()],
-            ['id' => 4, 'name' => 'kaka', 'nip' => 11111114 ,'created_at'=> \Carbon\Carbon::now()],
-            ['id' => 5, 'name' => 'kiki', 'nip' => 11111115 ,'created_at'=> \Carbon\Carbon::now()],
-            ['id' => 6, 'name' => 'kuku', 'nip' => 11111116 ,'created_at'=> \Carbon\Carbon::now()],
+            ['id' => 1, 'name' => 'rosita', 'nip' => 11111111 ,'created_at'=> \Carbon\Carbon::now()],
+            ['id' => 2, 'name' => 'khamilatul', 'nip' => 11111112 ,'created_at'=> \Carbon\Carbon::now()],
+            ['id' => 3, 'name' => 'siwi', 'nip' => 11111113 ,'created_at'=> \Carbon\Carbon::now()],
+            ['id' => 4, 'name' => 'alfira', 'nip' => 11111114 ,'created_at'=> \Carbon\Carbon::now()],
+            ['id' => 5, 'name' => 'lailatul', 'nip' => 11111115 ,'created_at'=> \Carbon\Carbon::now()],
+            ['id' => 6, 'name' => 'dea', 'nip' => 11111116 ,'created_at'=> \Carbon\Carbon::now()],
         ];
 
         // insert batch

@@ -4,7 +4,7 @@
            <div class="page-title">
         <div>
           <h1><i class="fa fa-edit"></i> Edit User</h1>
-          <p>Input Sebagai Identitas User</p>
+          <p>Edit User</p>
         </div>
         <div>
           <ul class="breadcrumb">
@@ -41,7 +41,7 @@
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputEmail">Email</label>
                         <div class="col-lg-10">
-                          <input class="form-control" nae="email"type="text" placeholder="Email"value="{{$user->email}}">
+                          <input class="form-control" name="email"type="text" placeholder="Email"value="{{$user->email}}">
                         </div>
                       </div>
                       <div class="form-group">

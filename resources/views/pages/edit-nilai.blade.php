@@ -4,7 +4,7 @@
       <div class="page-title">
         <div>
           <h1><i class="fa fa-edit"></i> Edit Nilai</h1>
-          <p>Input Sebagai Nilai Siswa </p>
+          <p>Edit Nilai Siswa </p>
         </div>
         <div>
           <ul class="breadcrumb">
@@ -45,7 +45,7 @@
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputTugas1">Kelas</label>
                         <div class="col-lg-10">
-                          <select name="siswa_id"class="form-control" id="idclass">
+                          <select name="class_id"class="form-control" id="idclass">
                           @foreach($classes as $class)
                           <option value="{{$class->id}}">{{$class->class}}</option>
                           @endforeach
@@ -62,7 +62,7 @@
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="select">Status</label>
                         <div class="col-lg-10">
-                          <select class="form-control" name="status" id="select" value="{{$value->status}}">
+                          <select class="form-control" name="status" id="idstatus" value="{{$value->status}}">
                               <option>Remidi</option>
                               <option>Lulus</option>
                             </select><br>
@@ -71,7 +71,7 @@
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="select">Semester</label>
                         <div class="col-lg-10">
-                          <select class="form-control"name="semester"id="select" value="{{$value->semester}}">
+                          <select class="form-control"name="semester"id="idsemester" value="{{$value->semester}}">
                               <option>1</option>
                               <option>2</option>
                             </select><br>
@@ -80,7 +80,7 @@
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="select">Type</label>
                         <div class="col-lg-10">
-                          <select class="form-control" name="type"id="select" value="{{$value->type}}">
+                          <select class="form-control" name="type"id="idtype" value="{{$value->type}}">
                               <option>Tugas 1</option>
                               <option>Tugas 2</option>
                               <option>UTS</option>
@@ -93,7 +93,7 @@
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="select">Mapel</label>
                         <div class="col-lg-10">
-                          <select name="mapel"class="form-control" id="idmapel">
+                          <select name="mapel_id"class="form-control" id="idmapel">
                           @foreach($subjects as $subject)
                           <option value="{{$subject->id}}">{{$subject->name}}</option>
                           @endforeach
@@ -191,5 +191,7 @@
       $('#idclass').select2();
       $('#idmapel').select2();
       $('#idstatus').select2();
+      $('#idtype').select2();
+      $('#idsemester').select2();
  </script>
 @endsection

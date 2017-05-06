@@ -77,7 +77,7 @@
                 $('#nav-dashboard').removeClass('active');
                 $('#nav-list-siswa').addClass('active');
                 break;  
-            case '/ values':
+            case '/values':
             case '/values/create':
                 $('#nav-list-class').removeClass('active');
                 $('#nav-list-guru').removeClass('active');

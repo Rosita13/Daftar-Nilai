@@ -21,7 +21,7 @@
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>Nama Siswa</th>
+                    <th>Id Siswa</th>
                     <th>Kelas</th>
                     <th>Mapel</th>
                     <th>Type</th>

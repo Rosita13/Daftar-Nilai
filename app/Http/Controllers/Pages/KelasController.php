@@ -35,6 +35,7 @@ class KelasController extends Controller
     public function edit($id)
     {
        $teachers = $this->teacher->getList();
-        return view('pages.create-class',compact('teachers'));
+       $kelas = $this->kelas->findById($id);
+        return view('pages.edit-class',compact('teachers','kelas'));
     }
 }

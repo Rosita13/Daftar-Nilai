@@ -4,7 +4,7 @@
   <div class="page-title">
         <div>
           <h1><i class="fa fa-edit"></i> Create Guru</h1>
-          <p>Input Sebagai Identitas Guru</p>
+          <p>Input Guru</p>
         </div>
         <div>
           <ul class="breadcrumb">
@@ -40,7 +40,7 @@
                        <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputNama">NIP</label>
                         <div class="col-lg-10">
-                          <input class="form-control" name="nip" type="text" placeholder="Nama" value="">
+                          <input class="form-control" name="nip" type="text" placeholder="NIP" value="">
                         </div>
                       </div>
                       <div class="form-group">
@@ -85,6 +85,7 @@
             // }, 2000);
             // tampilkan pesan sukses
             showNotifSuccess();
+            window.location.href = '{{route("page.list-guru")}}'
             // clear data inputan
             $('#formTeacher').find("input[type=text], textarea").val("");
             // kembali kelist book

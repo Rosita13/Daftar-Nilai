@@ -30,7 +30,7 @@
                   <td>{{ $kelas->guru_id }}</td>
                   <td>{{ $kelas->class}}</td>
                   <td>
-                   <a class="btn btn-info btn-flat"href={{route('page.edit-class',['id' => $kelas->id])}}><i class="fa fa-lg fa-edit"></i></a>
+                  <a class="btn btn-info btn-flat"href={{route('page.edit-class',['id' => $kelas->id])}}><i class="fa fa-lg fa-edit"></i></a>
                    <a class="btn btn-warning btn-flat"onClick="deleteData('{{$kelas->id}}')"><i class="fa fa-lg fa-trash"></i></a>
                   </td>
                   </tr>

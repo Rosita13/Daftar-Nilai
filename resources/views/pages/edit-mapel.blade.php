@@ -4,7 +4,7 @@
        <div class="page-title">
         <div>
           <h1><i class="fa fa-edit"></i> Edit Mata Pelajaran</h1>
-          <p>Input untuk Mata Pelajaran</p>
+          <p>Edit Mata Pelajaran</p>
         </div>
         <div>
           <ul class="breadcrumb">
@@ -36,7 +36,7 @@
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="select">Mapel</label>
                         <div class="col-lg-10">
-                          <select class="form-control" name="name" id="select"value="{{$subject->nip}}">
+                          <select class="form-control" name="name" id="idmapel"value="{{$subject->nip}}">
                               <option>MTK</option>
                               <option>KWU</option>
                               <option>IPA</option>
@@ -74,7 +74,6 @@
                         <a class="btn btn-default submit" href={{route('page.list-mapel')}}>Kembali</a>
                         </div>
                       </div>
-                    </fieldset>
                   </form>
                 </div>
               </div>
@@ -155,6 +154,7 @@
                  timer: 4000
              });
  	  }
-         $('#demoSelect').select2();
+        $('#demoSelect').select2();
+        $('#idmapel').select2();
  </script>
 @endsection

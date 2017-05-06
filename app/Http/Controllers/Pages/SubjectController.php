@@ -34,6 +34,7 @@ class SubjectController extends Controller
     public function edit($id)
     {
          $teachers = $this->teacher->getList();
-        return view('pages.create-mapel',compact('teachers'));
+         $subject = $this->subject->findById($id);
+        return view('pages.edit-mapel',compact('teachers','subject'));
     }
 }

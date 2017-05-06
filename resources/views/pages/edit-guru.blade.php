@@ -4,7 +4,7 @@
      <div class="page-title">
         <div>
           <h1><i class="fa fa-edit"></i> Edit Guru</h1>
-          <p>Input Sebagai Identitas Guru</p>
+          <p>Edit Guru</p>
         </div>
         <div>
           <ul class="breadcrumb">

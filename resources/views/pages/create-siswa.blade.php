@@ -4,7 +4,7 @@
  <div class="page-title">
         <div>
           <h1><i class="fa fa-edit"></i> Create Siswa</h1>
-          <p>Input Sebagai Identitas Siswa</p>
+          <p>Input Siswa</p>
         </div>
         <div>
           <ul class="breadcrumb">
@@ -99,6 +99,7 @@
             // }, 2000);
             // tampilkan pesan sukses
             showNotifSuccess();
+            window.location.href = '{{route("page.list-siswa")}}'
             // clear data inputan
             $('#formStudent').find("input[type=text], textarea").val("");
             // kembali kelist book

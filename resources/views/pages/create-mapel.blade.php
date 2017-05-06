@@ -4,7 +4,7 @@
  <div class="page-title">
         <div>
           <h1><i class="fa fa-edit"></i> Create Mata Pelajaran</h1>
-          <p>Input untuk Mata Pelajaran</p>
+          <p>Input Mata Pelajaran</p>
         </div>
         <div>
           <ul class="breadcrumb">
@@ -34,7 +34,7 @@
                        <div class="form-group">
                         <label class="col-lg-2 control-label" for="select">Mapel</label>
                         <div class="col-lg-10">
-                          <select class="form-control" name="name"id="select" value="">
+                          <select class="form-control" name="name"id="idmapel" value="">
                               <option>MTK</option>
                               <option>KWU</option>
                               <option>IPA</option>
@@ -108,6 +108,7 @@
             // }, 2000);
             // tampilkan pesan sukses
             showNotifSuccess();
+            window.location.href = '{{route("page.list-mapel")}}'
             // clear data inputan
             $('#formSubject').find("input[type=text], textarea").val("");
             // kembali kelist book
@@ -141,6 +142,7 @@
                 timer: 4000
             });
 	  }
+     $('#idmapel').select2();
     $('#demoSelect').select2();
   </script>
 @endsection
