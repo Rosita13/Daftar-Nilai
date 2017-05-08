@@ -26,16 +26,16 @@
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>Guru id</th>
                     <th>Mata Pelajaran</th>
+                    <th>Guru</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                  @foreach ($subjects as $subject)
                   <tr>
-                  <td>{{ $subject->guru_id }}</td>
                   <td>{{ $subject->name }}</td>
+                  <td>{{ $subject->teacher == null ? "null" : $subject->teacher->name  }}</td>
                   <td>
                   <a class="btn btn-info btn-flat"href={{route('page.edit-mapel',['id' => $subject->id])}}><i class="fa fa-lg fa-edit"></i></a>
                    <a class="btn btn-warning btn-flat"onClick="deleteData('{{$subject->id}}')"><i class="fa fa-lg fa-trash"></i></a>

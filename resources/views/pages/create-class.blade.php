@@ -32,7 +32,7 @@
                   <form class="form-horizontal" id="formClass">
                       <legend>Data Kelas</legend>
                       <div class="form-group">
-                        <label class="col-lg-2 control-label" for="inputNama">Guru</label>
+                        <label class="col-lg-2 control-label" for="inputNama">Wali Kelas</label>
                         <div class="col-lg-10">
                          <select name="guru_id" class="form-control" id="demoSelect">
                           @foreach($teachers as $teacher)

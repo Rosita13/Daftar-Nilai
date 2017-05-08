@@ -9,7 +9,8 @@
             <li class="active"><a href="#">Data Kelas</a></li>
           </ul>
         </div>
-        <div><a class="btn btn-primary btn-flat" href={{route('page.create-class')}}><i class="fa fa-lg fa-plus"></i></a>
+         <div>
+         <a class="btn btn-primary btn-flat" href={{route('page.create-class')}}><i class="fa fa-lg fa-plus"></i></a>
         <a class="btn btn-info btn-flat" href={{route('page.list-class')}}><i class="fa fa-lg fa-refresh"></i></a>
         <a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a></div>
       </div>
@@ -27,16 +28,16 @@
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>Guru id</th>
                     <th>Kelas</th>
+                    <th>Wali Kelas</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                  @foreach ($classes as $kelas)
                   <tr>
-                  <td>{{ $kelas->guru_id }}</td>
                   <td>{{ $kelas->class}}</td>
+                  <td>{{ $kelas->teacher == null ? "null" :$kelas->teacher->name  }}</td>
                   <td>
                   <a class="btn btn-info btn-flat"href={{route('page.edit-class',['id' => $kelas->id])}}><i class="fa fa-lg fa-edit"></i></a>
                    <a class="btn btn-warning btn-flat"onClick="deleteData('{{$kelas->id}}')"><i class="fa fa-lg fa-trash"></i></a>

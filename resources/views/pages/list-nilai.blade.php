@@ -28,7 +28,7 @@
               <table class="table table-hover table-bordered" id="sampleTable">
                 <thead>
                   <tr>
-                    <th>Id Siswa</th>
+                    <th>Nama Siswa</th>
                     <th>Kelas</th>
                     <th>Mapel</th>
                     <th>Type</th>
@@ -41,9 +41,9 @@
                 <tbody>
                  @foreach ($values as $value)
                   <tr>
-                  <td>{{ $value->siswa_id }}</td>
-                  <td>{{ $value->kelas->class }}</td>
-                  <td>{{ $value->subject->name }}</td>
+                  <td>{{ $value->student == null ? "null" :$value->student->name  }}</td>
+                  <td>{{ $value->kelas == null ? "null" :$value->kelas->class }}</td>
+                  <td>{{ $value->subject == null ? "null" :$value->subject->name }}</td>
                   <td>{{ $value->type }}</td>
                   <td>{{ $value->nilai }}</td>
                   <td>{{ $value->status }}</td>
