@@ -14,8 +14,8 @@ class CreateClassTable extends Migration
     public function up()
     {
           Schema::create('classes', function (Blueprint $table) {
-            $table->string('id');
-            $table->integer('guru_id' , false);
+            $table->uuid('id');
+            $table->uuid('guru_id');
             $table->string('class');
             $table->timestamps();
             $table->softDeletes();

@@ -14,12 +14,12 @@ class CreateStudentsTable extends Migration
     public function up()
     {
          Schema::create('students', function (Blueprint $table) {
-            $table->string('id');
+            $table->uuid('id');
             $table->string('name');
             $table->string('class');
             $table->string('email')->unique();
             $table->string('phone');
-            $table->integer('users_id' , false);
+            $table->uuid('users_id');
             $table->timestamps();
             $table->softDeletes();
             $table->primary('id');

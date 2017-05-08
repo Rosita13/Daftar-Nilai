@@ -14,14 +14,14 @@ class CreateValuesTable extends Migration
     public function up()
     {
      Schema::create('values', function (Blueprint $table) {
-            $table->string('id');
-            $table->integer('siswa_id' , false);
+            $table->uuid('id');
+            $table->uuid('siswa_id');
             $table->string('type');
             $table->string('status');
             $table->integer('nilai');
             $table->string('semester');
-            $table->integer('mapel_id', false);
-            $table->integer('class_id', false);
+            $table->uuid('mapel_id');
+            $table->uuid('class_id');
             $table->timestamps();
             $table->softDeletes();
             $table->primary('id');
