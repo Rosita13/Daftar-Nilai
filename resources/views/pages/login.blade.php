@@ -18,18 +18,18 @@
     </section>
     <section class="login-content">
       <div class="logo">
-        <h1>Vali</h1>
+        <h1>Daftar Nilai</h1>
       </div>
       <div class="login-box">
-        <form class="login-form" action="index.html">
+        <form name='formLogin' method="post" accept-charset="UTF-8" action="{{route('api.login')}}" class="login-form">
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
           <div class="form-group">
-            <label class="control-label">USERNAME</label>
-            <input class="form-control" type="text" placeholder="Email" autofocus>
+            <label class="control-label">Email</label>
+            <input name="email" class="form-control" type="text" placeholder="Email" autofocus>
           </div>
           <div class="form-group">
-            <label class="control-label">PASSWORD</label>
-            <input class="form-control" type="password" placeholder="Password">
+            <label class="control-label">Password</label>
+            <input name="password" class="form-control" type="password" placeholder="Password">
           </div>
           <div class="form-group">
             <div class="utility">
