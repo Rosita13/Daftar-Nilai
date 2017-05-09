@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS-->
     <link rel="stylesheet" type="text/css" href={{asset('css/main.css')}}>
-    <title>Vali Admin</title>
+    <title>Sistem Informasi Nilai Siswa</title>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
     <!--if lt IE 9
     script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
@@ -18,38 +18,42 @@
     </section>
     <section class="login-content">
       <div class="logo">
-        <h1>Daftar Nilai</h1>
+        <h1>Daftar-Nilai</h1>
       </div>
       <div class="login-box">
         <form name='formLogin' method="post" accept-charset="UTF-8" action="{{route('api.login')}}" class="login-form">
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
           <div class="form-group">
             <label class="control-label">Email</label>
-            <input name="email" class="form-control" type="text" placeholder="Email" autofocus>
+            <input name="email" class="form-control" type="text" placeholder="Email" autofocus required="true">
           </div>
           <div class="form-group">
             <label class="control-label">Password</label>
-            <input name="password" class="form-control" type="password" placeholder="Password">
+            <input name="password" class="form-control" type="password" placeholder="Password" required="true">
           </div>
           <div class="form-group">
             <div class="utility">
               <div class="animated-checkbox">
                 <label class="semibold-text">
                   <input type="checkbox"><span class="label-text">Stay Signed in</span>
-                </label>
+             </label>
               </div>
               <p class="semibold-text mb-0"><a id="toFlip" href="#">Forgot Password ?</a></p>
             </div>
           </div>
           <div class="form-group btn-container">
             <button class="btn btn-primary btn-block">SIGN IN <i class="fa fa-sign-in fa-lg"></i></button>
-          </div>
+          </div><br>
+          <div>
+            <p class="semibold-text mb-0"><a id="register" href={{route('page.register')}}><i class="ace-icon fa fa-arrow-left"> Register</i></a></p>
+          </div><br>
         </form>
+
         <form class="forget-form" action="index.html">
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>Forgot Password ?</h3>
           <div class="form-group">
             <label class="control-label">EMAIL</label>
-            <input class="form-control" type="text" placeholder="Email">
+            <input class="form-control" type="text" placeholder="Email" required="true">
           </div>
           <div class="form-group btn-container">
             <button class="btn btn-primary btn-block">RESET <i class="fa fa-unlock fa-lg"></i></button>

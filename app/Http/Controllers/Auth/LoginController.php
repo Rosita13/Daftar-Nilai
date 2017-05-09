@@ -55,13 +55,13 @@ class LoginController extends Controller
     {
         if ($this->auth->attempt($request->only('email', 'password'), true)) {
             
-            // simpan ke session
+        //     // simpan ke session
             session()->put('user_id', Auth::user()->id);
             session()->put('email', Auth::user()->email);
             session()->put('name', Auth::user()->name);
             session()->put('level', Auth::user()->level);
          
-                // redirect ke backoffice
+        //         // redirect ke backoffice
         return redirect()->route('page.dashboard');
         }
         

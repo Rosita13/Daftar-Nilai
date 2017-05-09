@@ -29,6 +29,10 @@ class AppServiceProvider extends ServiceProvider
             ->needs('App\Domain\Contracts\UserInterface')
             ->give('App\Domain\Repositories\UserRepository');
 
+       $this->app->when('App\Http\Controllers\RegisterController')
+            ->needs('App\Domain\Contracts\RegisterInterface')
+            ->give('App\Domain\Repositories\RegisterRepository');
+
         $this->app->when('App\Http\Controllers\StudentController')
             ->needs('App\Domain\Contracts\StudentInterface')
             ->give('App\Domain\Repositories\StudentRepository');
