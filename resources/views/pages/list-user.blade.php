@@ -12,6 +12,8 @@
         <div><a class="btn btn-primary btn-flat" href={{route('page.create-user')}}><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
            href={{route('page.list-user')}}><i class="fa fa-lg fa-refresh"></i></a><a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a></div>
       </div>
+       <div class="content">
+      <div class="row">
       <div class="col-md-4 pull-right">
         <form method="GET" action="{{route('page.list-user')}}"> 
           <div class="form-group">
@@ -23,7 +25,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-body">
-              <table class="table table-hover table-bordered" id="sampleTable">
+              <div class="table-responsive table-full-width">
+              <table class="table table-hover table-striped">
                 <thead>
                   <tr>
                     <th>Nama</th>
