@@ -97,7 +97,6 @@
             // }, 2000);
             // tampilkan pesan sukses
             showNotifSuccess();
-            window.location.href = '{{route("page.list-user")}}'
             // clear data inputan
             $('#formUser').find("input[type=text], textarea").val("");
             // kembali kelist book

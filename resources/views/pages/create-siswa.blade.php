@@ -145,7 +145,6 @@
             // }, 2000);
             // tampilkan pesan sukses
             showNotifSuccess();
-            window.location.href = '{{route("page.list-siswa")}}'
             // clear data inputan
             $('#formStudent').find("input[type=text], textarea").val("");
             // kembali kelist book

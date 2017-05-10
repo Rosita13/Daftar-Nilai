@@ -85,7 +85,6 @@
             // }, 2000);
             // tampilkan pesan sukses
             showNotifSuccess();
-            window.location.href = '{{route("page.list-guru")}}'
             // clear data inputan
             $('#formTeacher').find("input[type=text], textarea").val("");
             // kembali kelist book

@@ -108,7 +108,6 @@
             // }, 2000);
             // tampilkan pesan sukses
             showNotifSuccess();
-            window.location.href = '{{route("page.list-mapel")}}'
             // clear data inputan
             $('#formSubject').find("input[type=text], textarea").val("");
             // kembali kelist book

@@ -135,7 +135,6 @@
             // }, 2000);
             // tampilkan pesan sukses
             showNotifSuccess();
-            window.location.href = '{{route("page.list-class")}}'
             // clear data inputan
             $('#formClass').find("input[type=text], textarea").val("");
             // kembali kelist book
