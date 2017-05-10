@@ -27,22 +27,23 @@
         <form class="register-form" id="formRegister">
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>REGISTER</h3>
           <div class="form-group">
-            <input class="form-control"name="name"type="text" placeholder="Nama" value="" required="true" >
+            <input class="form-control"name="name"type="text" placeholder="Nama" value="" required >
           </div>
             <div class="form-group">
-            <input name="email" class="form-control" type="text" placeholder="Email"value="" required="true">
+            <input name="email" class="form-control" type="text" placeholder="Email"value="" required>
           </div>
 
            <div class="form-group">
-            <input class="form-control"name="phone"type="text" placeholder="Telephone" value="" required="true">
+            <input class="form-control"name="phone"type="text" placeholder="Telephone" value="" required>
           </div>
 
            <div class="form-group">
-            <input class="form-control"name="password"type="password" placeholder="Password" value="" required="true">
+            <input class="form-control"name="password"type="password" placeholder="Password" value="" required>
           </div>
 
           <div class="form-group btn-container">
              <button class="btn btn-primary btn-block" id="btnSimpan">Simpan <i class="fa fa-sign-in fa-lg"></i></button>
+             <button class="btn btn-primary btn-block" type"reset">Cancel <i class="fa fa-sign-in fa-lg"></i></button>
           </div>
 
           <div class="form-group mt-20">
@@ -55,7 +56,6 @@
       </div>
       </div>
     </section>
-    <br></br>
   </body>
   <script src={{asset('js/jquery-2.1.4.min.js')}}></script>
   <script src={{asset('js/essential-plugins.js')}}></script>
@@ -65,6 +65,7 @@
   <script type="text/javascript" src={{asset('js/plugins/bootstrap-notify.min.js')}}></script>
 
   <script>
+  $("#formRegister").validate();
     $(document).ready(function(){
       
     });
