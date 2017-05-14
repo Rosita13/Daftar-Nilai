@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- CSS-->
   <link rel="stylesheet" type="text/css" href={{asset('css/main.css')}}>
-  <title>Daftar Nilai - @yield('title')</title>
+  <title>Sistem Informasi Nilai Siswa - @yield('title')</title>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
   <!--if lt IE 9
     script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')

@@ -41,6 +41,10 @@
             <input class="form-control"name="password"type="password" placeholder="Password" value="" required>
           </div>
 
+          <div class="form-group">
+            <input class="form-control"name="ConfirmPassword"type="password" placeholder="Confirm Password" value="" required>
+          </div>
+
           <div class="form-group btn-container">
              <button class="btn btn-primary btn-block" id="btnSimpan">Simpan <i class="fa fa-sign-in fa-lg"></i></button>
              <button class="btn btn-primary btn-block" type"reset">Cancel <i class="fa fa-sign-in fa-lg"></i></button>

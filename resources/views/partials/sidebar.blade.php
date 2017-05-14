@@ -4,7 +4,7 @@
         <div class="user-panel">
           <div class="pull-left image"><img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image"></div>
           <div class="pull-left info">
-            <p>John Doe</p>
+            <p>{{ isset(Auth::user()->name) ? Auth::user()->name : 'Not logged yet' }}</p>
             <p class="designation">Frontend Developer</p>
           </div>
         </div>

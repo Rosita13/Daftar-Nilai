@@ -1,5 +1,5 @@
  <!-- Navbar-->
-    <header class="main-header hidden-print"><a class="logo" href="index.html">Sinis</a>
+    <header class="main-header hidden-print"><a class="logo" href="index.html">Daftar nilai</a>
       <nav class="navbar navbar-static-top">
         <!-- Sidebar toggle button-->
         <a class="sidebar-toggle" href="#" data-toggle="offcanvas"></a>

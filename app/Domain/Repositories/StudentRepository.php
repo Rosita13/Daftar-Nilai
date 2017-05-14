@@ -48,7 +48,7 @@ class StudentRepository extends AbstractRepository implements StudentInterface, 
     public function paginate($limit = 10, $page = 1, array $column = ['*'], $field, $search = '')
     {
         // query to aql
-        return parent::paginate($limit, $page, $column, 'class', $search);
+        return parent::paginate($limit, $page, $column, 'name', $search);
     }
 
     /**

@@ -173,7 +173,7 @@
       // kasih ini dong biar gag hard reload
       event.preventDefault();
       $.ajax({
-        url: '{{route("users.store")}}', // url post data
+        url: '{{route("students.store")}}', // url post data
         dataType: 'JSON',
         type: 'POST',
         contentType: 'application/x-www-form-urlencoded',

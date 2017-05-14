@@ -10,8 +10,7 @@
           </ul>
         </div>
         <div><a class="btn btn-primary btn-flat" href={{route('page.create-nilai')}}><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat"
-           href={{route('page.list-nilai')}}><i class="fa fa-lg fa-refresh"></i></a>
-          <a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a>
+           href={{route('page.list-nilai')}}><i class="fa fa-lg fa-refresh"></i></a><a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a>
         </div>
       </div>
       <div class="content">
