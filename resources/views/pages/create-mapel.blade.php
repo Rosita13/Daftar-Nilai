@@ -136,11 +136,11 @@
       // kasih ini dong biar gag hard reload
       event.preventDefault();
       $.ajax({
-        url: '{{route("users.store")}}', // url post data
+        url: '{{route("subjects.store")}}', // url post data
         dataType: 'JSON',
         type: 'POST',
         contentType: 'application/x-www-form-urlencoded',
-        data: $("#formUser").serialize(), // data tadi diserialize berdasarkan name
+        data: $("#formSubject").serialize(), // data tadi diserialize berdasarkan name
         success: function( data, textStatus, jQxhr ){
             console.log('status =>', textStatus);
             console.log('data =>', data);
@@ -155,7 +155,7 @@
             showNotifSuccess();
             window.location.replace('{{route("page.list-mapel")}}');
             // clear data inputan
-            $('#formUser').find("input[type=text], textarea").val("");
+            $('#formSubject').find("input[type=text], textarea").val("");
             // kembali kelist book
         },
         error: function( data, textStatus, errorThrown ){

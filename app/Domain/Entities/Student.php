@@ -17,7 +17,7 @@ class Student extends Entities
      * @var array
      */
     protected $fillable = [
-        'name', 'class', 'email', 'phone','users_id'
+        'nis','name', 'class', 'email', 'phone','users_id'
     ];
      protected $primaryKey = 'id';
 

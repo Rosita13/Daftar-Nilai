@@ -32,6 +32,12 @@
                   <form class="form-horizontal"id="formStudent">
                    <input type="hidden" class="form-control" value="{{$student->id}}">
                       <legend>Data Siswa</legend>
+                         <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputNama">NIS</label>
+                        <div class="col-lg-10">
+                          <input class="form-control" name="nis" type="text" placeholder="NIS"value="{{$student->nis}}">
+                        </div>
+                      </div>
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputNama">Nama</label>
                         <div class="col-lg-10">

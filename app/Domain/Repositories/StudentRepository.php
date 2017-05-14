@@ -59,6 +59,7 @@ class StudentRepository extends AbstractRepository implements StudentInterface, 
     {
         // execute sql insert
         return parent::create([
+            'nis'    => e($data['nis']),
             'name'    => e($data['name']),
             'class'    => e($data['class']),
             'email'   => e($data['email']),
@@ -76,6 +77,7 @@ class StudentRepository extends AbstractRepository implements StudentInterface, 
     public function update($id, array $data)
     {
         return parent::update($id, [
+            'nis'    => e($data['nis']),
             'name'    => e($data['name']),
             'class'    => e($data['class']),
             'email'   => e($data['email']),

@@ -29,6 +29,7 @@
               <table class="table table-hover table-striped">
                 <thead>
                   <tr>
+                    <th>NIS</th>
                     <th>Nama</th>
                     <th>Kelas</th>
                     <th>Email</th>
@@ -39,6 +40,7 @@
                 <tbody>
                 @foreach ($students as $student)
                   <tr>
+                  <td>{{ $student->nis }}</td>
                   <td>{{ $student->name }}</td>
                   <td>{{ $student->class }}</td>
                   <td>{{ $student->email }}</td>

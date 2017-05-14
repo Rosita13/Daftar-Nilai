@@ -27,8 +27,9 @@ class StudentCreateRequest extends Request
      * @var array
      */
     protected $attrs = [
+        'nis'    => 'Nis',
         'name'    => 'Name',
-         'class'    => 'class',
+         'class'    => 'Class',
         'email'   => 'Email',
         'phone'   => 'Phone',
         // 'users_id' => 'users_id'
@@ -42,6 +43,7 @@ class StudentCreateRequest extends Request
     public function rules()
     {
         return [
+            'nis'    => 'required|max:225',
             'name'    => 'required|max:225',
              'class'    => 'required|max:225',
             'email'   => 'required|email|unique:students,email|max:225',

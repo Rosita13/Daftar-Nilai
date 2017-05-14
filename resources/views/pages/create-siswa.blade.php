@@ -32,6 +32,12 @@
                   <form class="form-horizontal" id="formStudent">
                     <fieldset>
                       <legend>Data Siswa</legend>
+                         <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputNama">NIS</label>
+                        <div class="col-lg-10">
+                          <input class="form-control" name="nis" type="text" placeholder="NIS" value="">
+                        </div>
+                      </div>
                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputNama">Nama</label>
                         <div class="col-lg-10">
@@ -51,7 +57,7 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="col-lg-2 control-label" for="select">kelas</label>
+                        <label class="col-lg-2 control-label" for="select">Kelas</label>
                         <div class="col-lg-10">
                           <select class="form-control" name="class"id="idclass" value="">
                               <option>X RPL 1</option>
@@ -177,7 +183,7 @@
         dataType: 'JSON',
         type: 'POST',
         contentType: 'application/x-www-form-urlencoded',
-        data: $("#formUser").serialize(), // data tadi diserialize berdasarkan name
+        data: $("#formStudent").serialize(), // data tadi diserialize berdasarkan name
         success: function( data, textStatus, jQxhr ){
             console.log('status =>', textStatus);
             console.log('data =>', data);
@@ -192,7 +198,7 @@
             showNotifSuccess();
             window.location.replace('{{route("page.list-siswa")}}');
             // clear data inputan
-            $('#formUser').find("input[type=text], textarea").val("");
+            $('#formStudent').find("input[type=text], textarea").val("");
             // kembali kelist book
         },
         error: function( data, textStatus, errorThrown ){
