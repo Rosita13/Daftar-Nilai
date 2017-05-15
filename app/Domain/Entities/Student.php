@@ -17,14 +17,18 @@ class Student extends Entities
      * @var array
      */
     protected $fillable = [
-        'nis','name', 'class', 'email', 'phone','users_id'
+        'nis','name', 'class_id', 'email', 'phone','users_id'
     ];
      protected $primaryKey = 'id';
 
-    protected $with = ['user'];
+    protected $with = ['user','kelas'];
     public function user()
     {
         return $this->belongsTo('App\Domain\Entities\User', 'users_id');
+    }
+     public function kelas()
+    {
+        return $this->belongsTo('App\Domain\Entities\Kelas', 'class_id');
     }
 
 }

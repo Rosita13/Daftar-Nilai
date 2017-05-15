@@ -29,7 +29,7 @@ class StudentEditRequest extends Request
     protected $attrs = [
     'nis'    => 'Nis',
     'name'    => 'Name',
-    'class'    => 'Class',
+    'class_id'    => 'Class_id',
     'email'   => 'Email',
     'phone'   => 'Phone',
     // 'users_id' => 'users_id'
@@ -45,7 +45,7 @@ class StudentEditRequest extends Request
         return [
         'nis'    => 'required|max:225',
         'name'    => 'required|max:225',
-        'class'    => 'required|max:225',
+        'class_id'    => 'required|max:225',
         'email'   => 'required|email|max:225',
         'phone'   => 'required|max:30',
         ];

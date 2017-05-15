@@ -42,7 +42,7 @@
                   <tr>
                   <td>{{ $student->nis }}</td>
                   <td>{{ $student->name }}</td>
-                  <td>{{ $student->class }}</td>
+                  <td>{{ $student->kelas == null ? "null" :$student->kelas->class }}</td>
                   <td>{{ $student->email }}</td>
                   <td>{{ $student->phone }}</td>
                   <td>

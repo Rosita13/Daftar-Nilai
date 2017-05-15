@@ -17,7 +17,7 @@ class CreateStudentsTable extends Migration
             $table->uuid('id');
             $table->string('nis');
             $table->string('name');
-            $table->string('class');
+            $table->string('class_id');
             $table->string('email')->unique();
             $table->string('phone');
             $table->uuid('users_id');
