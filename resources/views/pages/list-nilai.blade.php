@@ -50,7 +50,13 @@
                   <td>{{ $value->subject == null ? "null" :$value->subject->name }}</td>
                   <td>{{ $value->type }}</td>
                   <td>{{ $value->nilai }}</td>
-                  <td>{{ $value->status }}</td>
+                  <td>
+                    @if($value->status == 'remidi')
+                      <span class="label label-warning">{{ $value->status }}</span>
+                    @elseif($value->status == 'Lulus')
+                      <span class="label label-success">{{ $value->status }}</span>
+                    @endif
+                  </td>
                   <td>{{ $value->semester }}</td>
                   <td>
                     <a class="btn btn-info btn-flat"href={{route('page.edit-nilai',['id' => $value->id])}}><i class="fa fa-lg fa-edit"></i></a>
