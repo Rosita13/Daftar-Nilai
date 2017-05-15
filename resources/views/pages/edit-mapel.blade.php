@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 @section('title', 'Edit Mapel')
 @section('content')
        <div class="page-title">

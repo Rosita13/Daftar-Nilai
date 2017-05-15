@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('pages.dashboard');
 })->name('page.dashboard');
 
-Route::get('/login','Auth\LoginController@getLogin')->name('page.login');
-Route::get('/register','Pages\RegisterController@create')->name('page.register');
+// Route::get('/login','Auth\LoginController@getLogin')->name('page.login');
+// Route::get('/register','Pages\RegisterController@create')->name('page.register');
 
 Route::get('/users','Pages\UserController@index')->name('page.list-user');
 Route::get('/users/create','Pages\UserController@create')->name('page.create-user');
@@ -42,3 +42,19 @@ Route::get('/subjects','Pages\SubjectController@index')->name('page.list-mapel')
 Route::get('/subjects/create','Pages\SubjectController@create')->name('page.create-mapel');
 Route::get('/subjects/{id}/edit','Pages\SubjectController@edit')->name('page.edit-mapel');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
