@@ -32,6 +32,16 @@
                   <form class="form-horizontal" id="formValue">
                       <legend>Data Siswa</legend>
                       <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputNama">NIS</label>
+                        <div class="col-lg-10">
+                          <select name="nis"class="form-control" id="idNIS">
+                          @foreach($students as $student)
+                          <option value="{{$student->id}}">{{$student->nis}}</option>
+                          @endforeach
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputNama">Siswa</label>
                         <div class="col-lg-10">
                           <select name="siswa_id"class="form-control" id="demoSelect">
@@ -220,6 +230,8 @@
                 timer: 4000
             });
 	  }
+    
+      $('#idNIS').select2();
       $('#demoSelect').select2();
       $('#idclass').select2();
       $('#idmapel').select2();

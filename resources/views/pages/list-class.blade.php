@@ -10,9 +10,7 @@
           </ul>
         </div>
          <div>
-         <a class="btn btn-primary btn-flat" href={{route('page.create-class')}}><i class="fa fa-lg fa-plus"></i></a>
-        <a class="btn btn-info btn-flat" href={{route('page.list-class')}}><i class="fa fa-lg fa-refresh"></i></a>
-        <a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a></div>
+         <a class="btn btn-primary btn-flat" href={{route('page.create-class')}}><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-info btn-flat" href={{route('page.list-class')}}><i class="fa fa-lg fa-refresh"></i></a><a class="btn btn-primary btn-flat" href="javascript:window.print();"><i class="fa fa-print"></i></a></div>
       </div>
        <div class="content">
       <div class="row">
@@ -40,7 +38,7 @@
                  @foreach ($classes as $kelas)
                   <tr>
                   <td>{{ $kelas->class}}</td>
-                  <td>{{ $kelas->teacher == null ? "null" :$kelas->teacher->name  }}</td>
+                  <td>{{ $kelas->teacher == null ? "null" :$kelas->teacher->name}}</td>
                   <td>
                   <a class="btn btn-info btn-flat"href={{route('page.edit-class',['id' => $kelas->id])}}><i class="fa fa-lg fa-edit"></i></a>
                    <a class="btn btn-warning btn-flat"onClick="deleteData('{{$kelas->id}}')"><i class="fa fa-lg fa-trash"></i></a>

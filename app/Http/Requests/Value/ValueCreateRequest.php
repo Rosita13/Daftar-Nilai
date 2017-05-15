@@ -27,13 +27,14 @@ class ValueCreateRequest extends Request
      * @var array
      */
     protected $attrs = [
+        'nis'    => 'nis',
         'siswa_id'=> 'siswa_id',
+        'class_id'=> 'class_id',
         'type'    => 'type',
         'status'  => 'status',
         'nilai'   => 'nilai',
         'semester'=> 'semester',
-        'mapel_id'=> 'mapel_id',
-        'class_id'=> 'class_id'
+        'mapel_id'=> 'mapel_id'
     ];
 
     /**
@@ -44,13 +45,14 @@ class ValueCreateRequest extends Request
     public function rules()
     {
         return [
+        'nis'    => 'required|max:225',
         'siswa_id'=> 'required|max:225',
+        'class_id'=> 'required|max:60',
         'type'    => 'required|max:225',
         'status'  => 'required|max:60',
         'nilai'   => 'required|max:60',
         'semester'=> 'required|max:60',
-        'mapel_id'=> 'required|max:60',
-        'class_id'=> 'required|max:60'
+        'mapel_id'=> 'required|max:60'
         ];
     }
 

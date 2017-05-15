@@ -27,7 +27,8 @@ class KelasCreateRequest extends Request
      * @var array
      */
     protected $attrs = [
-        'guru_id'    => 'guru_id'
+        'guru_id'    => 'guru_id',
+        'class'    => 'class'
     ];
 
     /**
@@ -38,7 +39,8 @@ class KelasCreateRequest extends Request
     public function rules()
     {
         return [
-            'guru_id'    => 'required|max:225'
+            'guru_id'    => 'required|max:225',
+            'class'    => 'required|max:225'
         ];
     }
 

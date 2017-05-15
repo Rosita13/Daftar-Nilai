@@ -30,6 +30,7 @@
               <table class="table table-hover table-striped" >
                 <thead>
                   <tr>
+                    <th>NIS</th>
                     <th>Nama Siswa</th>
                     <th>Kelas</th>
                     <th>Mapel</th>
@@ -43,6 +44,7 @@
                 <tbody>
                  @foreach ($values as $value)
                   <tr>
+                  <td>{{ $value->student == null ? "null" :$value->student->nis  }}</td>
                   <td>{{ $value->student == null ? "null" :$value->student->name  }}</td>
                   <td>{{ $value->kelas == null ? "null" :$value->kelas->class }}</td>
                   <td>{{ $value->subject == null ? "null" :$value->subject->name }}</td>
