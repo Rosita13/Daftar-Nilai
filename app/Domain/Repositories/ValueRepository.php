@@ -58,7 +58,6 @@ class ValueRepository extends AbstractRepository implements ValueInterface, Crud
     {
         // execute sql insert
         return parent::create([
-            'nis'    => e($data['nis']),
             'siswa_id'=> e($data['siswa_id']),
             'type'    => e($data['type']),
             'status'  => e($data['status']),
@@ -78,7 +77,6 @@ class ValueRepository extends AbstractRepository implements ValueInterface, Crud
     public function update($id, array $data)
     {
         return parent::update($id, [
-            'nis'    => e($data['nis']),
            'siswa_id' => e($data['siswa_id']),
             'type'    => e($data['type']),
             'status'  => e($data['status']),

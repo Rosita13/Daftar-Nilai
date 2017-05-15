@@ -27,7 +27,6 @@ class ValueEditRequest extends Request
      * @var array
      */
     protected $attrs = [
-        'nis'    => 'nis',
          'siswa_id'=> 'siswa_id',
          'type'   => 'type',
         'status'  => 'status',
@@ -45,7 +44,6 @@ class ValueEditRequest extends Request
     public function rules()
     {
         return [
-        'nis'    => 'required|max:225',
         'siswa_id'=> 'required|max:225',
         'type'    => 'required|max:225',
         'status'  => 'required|max:60',

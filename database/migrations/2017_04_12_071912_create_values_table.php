@@ -16,7 +16,6 @@ class CreateValuesTable extends Migration
      Schema::create('values', function (Blueprint $table) {
             $table->uuid('id');
             $table->uuid('siswa_id');
-            $table->integer('nis');
             $table->string('type');
             $table->string('status');
             $table->integer('nilai');

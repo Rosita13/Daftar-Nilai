@@ -27,7 +27,6 @@ class ValueCreateRequest extends Request
      * @var array
      */
     protected $attrs = [
-        'nis'    => 'nis',
         'siswa_id'=> 'siswa_id',
         'class_id'=> 'class_id',
         'type'    => 'type',
@@ -45,7 +44,6 @@ class ValueCreateRequest extends Request
     public function rules()
     {
         return [
-        'nis'    => 'required|max:225',
         'siswa_id'=> 'required|max:225',
         'class_id'=> 'required|max:60',
         'type'    => 'required|max:225',

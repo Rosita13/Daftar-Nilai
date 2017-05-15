@@ -18,7 +18,7 @@ class Value extends Entities
      */
       protected $table = 'values';
     protected $fillable = [
-        'nis','siswa_id', 'type', 'status','nilai','semester','mapel_id','class_id'
+        'siswa_id', 'type', 'status','nilai','semester','mapel_id','class_id'
     ];
      protected $primaryKey = 'id';
      protected $with = ['student','subject','kelas'];
