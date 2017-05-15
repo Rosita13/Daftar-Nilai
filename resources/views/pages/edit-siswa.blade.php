@@ -61,7 +61,10 @@
                         <div class="col-lg-10">
                           <select name="class_id"class="form-control" id="idclass">
                           @foreach($classes as $class)
-                          <option value="{{$class->id}}">{{$class->class}}</option>
+                            @if($class->id == $student->class_id)
+                            <option value="{{$class->id}}" selected>{{$class->class}}</option>
+                            @endif
+                            <option value="{{$class->id}}">{{$class->class}}</option>
                           @endforeach
                           </select>
                         </div>

@@ -51,7 +51,7 @@
                   <td>{{ $value->type }}</td>
                   <td>{{ $value->nilai }}</td>
                   <td>
-                    @if($value->status == 'remidi')
+                    @if($value->status == 'Remidi')
                       <span class="label label-warning">{{ $value->status }}</span>
                     @elseif($value->status == 'Lulus')
                       <span class="label label-success">{{ $value->status }}</span>

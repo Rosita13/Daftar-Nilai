@@ -8,14 +8,14 @@ use App\Http\Controllers\Controller;
 class StudentController extends Controller
 {
     /**
-     * @var StudentInterface
-     */
+    * @var StudentInterface
+    */
     protected $student;
     protected $class;
     /**
-     * StudentController constructor.
-     * @param StudentInterface $student
-     */
+    * StudentController constructor.
+    * @param StudentInterface $student
+    */
     public function __construct(StudentRepository $student,kelasRepository $class)
     {
         $this->student = $student;
@@ -30,13 +30,13 @@ class StudentController extends Controller
     {
         $classes = $this->class->getList();
         $arr= [$classes];
-        return view('pages.create-siswa',compact('classes',$arr)); 
+        return view('pages.create-siswa',compact('classes',$arr));
     }
     public function edit($id)
     {
         $classes = $this->class->getList();
         $arr= [$classes];
         $student = $this->student->findById($id);
-        return view('pages.edit-siswa',compact('classes',$arr));  
+        return view('pages.edit-siswa',compact(['classes','student'],$arr));
     }
 }
