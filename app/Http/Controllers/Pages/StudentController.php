@@ -35,7 +35,7 @@ class StudentController extends Controller
     public function edit($id)
     {
         $classes = $this->class->getList();
-        $arr= [$students,$classes,$subjects];
+        $arr= [$classes];
         $student = $this->student->findById($id);
         return view('pages.edit-siswa',compact('classes',$arr));  
     }
