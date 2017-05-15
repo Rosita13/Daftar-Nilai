@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 @section('title', 'Edit Nilai')
 @section('content')
       <div class="page-title">
