@@ -106,5 +106,34 @@ class ValueRepository extends AbstractRepository implements ValueInterface, Crud
     {
         return parent::find($id, $columns);
     }
+    public function getByPagecetak()
+    {
+
+        // query to aql
+        $AsalUsul = $this->model
+            ->join('students', 'values.siswa_id', '=', 'students.id')
+            ->join('subjects', 'values.mapel_id', '=', 'subjects.id')
+            ->join('classes', 'values.class_id', '=', 'classes.id')
+            ->join('teachers', 'classes.guru_id', '=', 'teachers.id')
+//            ->where('asal_usul.desa_id', session('desa'))
+//            ->where('asal_usul.is_lock', 2)
+//            ->whereMonth('asal_usul.created_at', $id)
+            ->orderBy('values.id', 'asc')
+            ->select(
+                'students.nis',
+                'students.name',
+                'classes.class',
+                'subjects.name as mata_pelajaran',
+                'values.type',
+                'values.nilai',
+                'values.status',
+                'teachers.nip',
+                'teachers.name as name_guru',
+                'values.semester')
+            ->get();
+
+        return $AsalUsul;
+    }
+
 
 }

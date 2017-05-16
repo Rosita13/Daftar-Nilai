@@ -28,4 +28,9 @@ Route::get('getList-teachers','TeacherController@getList');
 Route::get('getList-students','StudentController@getList');
 Route::post('post-login', 'Auth\LoginController@postLogin')->name('api.login');
 Route::get('logout', 'Auth\LoginController@getLogout')->name('api.logout');
+////---------------------------------------------------------------------------------------------------------------------------------------
+Route::group(['namespace' => 'Cetak'], function () {
+
+    Route::get('cetak-nilai', 'CetakNilai@Nilai');
+});
 // Route::get('getList-users','UserController@getList');
