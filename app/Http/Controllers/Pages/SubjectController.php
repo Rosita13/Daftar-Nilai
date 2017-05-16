@@ -18,6 +18,7 @@ class SubjectController extends Controller
      */
     public function __construct(SubjectRepository $subject,TeacherRepository $teacher)
     {
+        $this->middleware('auth');  
         $this->subject = $subject;
         $this->teacher = $teacher;
     }
@@ -33,8 +34,10 @@ class SubjectController extends Controller
     }
     public function edit($id)
     {
+         $subjects = $this->subject->getList();
          $teachers = $this->teacher->getList();
+         $arr= [$teachers,$subjects];
          $subject = $this->subject->findById($id);
-        return view('pages.edit-mapel',compact('teachers','subject'));
+        return view('pages.edit-mapel',compact('teachers','subject','subjects',$arr));
     }
 }

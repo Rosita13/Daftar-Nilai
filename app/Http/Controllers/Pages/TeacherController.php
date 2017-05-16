@@ -16,6 +16,8 @@ class TeacherController extends Controller
      */
     public function __construct(TeacherRepository $teacher)
     {
+        
+        $this->middleware('auth');  
         $this->teacher = $teacher;
     }
     public function index(Request $request)

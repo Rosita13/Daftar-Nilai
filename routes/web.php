@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.dashboard');
-})->name('page.dashboard');
+
+Route::get('/', 'HomeController@dashboard')->name('page.dashboard');
+
 
 // Route::get('/login','Auth\LoginController@getLogin')->name('page.login');
 // Route::get('/register','Pages\RegisterController@create')->name('page.register');
@@ -47,14 +47,3 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');

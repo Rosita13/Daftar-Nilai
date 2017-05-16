@@ -25,7 +25,8 @@
               <ul class="dropdown-menu settings-menu">
                 <li><a href="#"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
                 <li><a href="#"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-                <li><a href="{{route('api.logout')}}"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+                <li><a href="{{ url('/logout') }}"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
               </ul>
             </li>
           </ul>

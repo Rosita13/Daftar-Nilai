@@ -18,6 +18,8 @@ class StudentController extends Controller
     */
     public function __construct(StudentRepository $student,kelasRepository $class)
     {
+        
+        $this->middleware('auth');  
         $this->student = $student;
         $this->class = $class;
     }

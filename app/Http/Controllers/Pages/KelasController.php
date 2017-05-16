@@ -19,6 +19,7 @@ class KelasController extends Controller
      */
     public function __construct(KelasRepository $kelas,TeacherRepository $teacher)
     {
+        $this->middleware('auth');
         $this->kelas = $kelas;
         $this->teacher = $teacher;
     }

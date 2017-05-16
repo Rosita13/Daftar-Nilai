@@ -23,6 +23,7 @@ class ValueController extends Controller
      */
     public function __construct(ValueRepository $value, StudentRepository $student,kelasRepository $class,subjectRepository $subject )
     {
+        $this->middleware('auth');  
         $this->value = $value;
         $this->student = $student;
         $this->class = $class;
