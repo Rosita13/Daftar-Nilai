@@ -36,8 +36,8 @@ class SubjectController extends Controller
     {
          $subjects = $this->subject->getList();
          $teachers = $this->teacher->getList();
-         $arr= [$teachers,$subjects];
          $subject = $this->subject->findById($id);
+         $arr= [$teachers, $subjects, $subject];
         return view('pages.edit-mapel',compact('teachers','subject','subjects',$arr));
     }
 }

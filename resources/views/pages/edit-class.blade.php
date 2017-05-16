@@ -46,55 +46,9 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="col-lg-2 control-label" for="select">Kelas</label>
+                        <label class="col-lg-2 control-label" for="inputKelas">Kelas</label>
                         <div class="col-lg-10">
-                          <select class="form-control" name="class" id="idclass"value="{{$kelas->class}}">
-                              <option>X RPL 1</option>
-                              <option>X RPL 2</option>
-                              <option>X RPL 3</option>
-                              <option>XI RPL 1</option>
-                              <option>XI RPL 2</option>
-                              <option>XI RPL 3</option>
-                              <option>XII RPL 1</option>
-                              <option>XII RPL 2</option>
-                              <option>XII RPL 3</option>
-                              <option>X TKJ 1</option>
-                              <option>X TKJ 2</option>
-                              <option>X TKJ 3</option>
-                              <option>XI TKJ 1</option>
-                              <option>XI TKJ 2</option>
-                              <option>XI TKJ 3</option>
-                              <option>XII TKJ 2</option>
-                              <option>XII TKJ 2</option>
-                              <option>XII TKJ 3</option>
-                              <option>X TEI 1</option>
-                              <option>X TEI 2</option>
-                              <option>X TEI 3</option>
-                              <option>XI TEI 1</option>
-                              <option>XI TEI 2</option>
-                              <option>XI TEI 3</option>
-                              <option>XII TEI 1</option>
-                              <option>XII TEI 2</option>
-                              <option>XII TEI 3</option>
-                              <option>X TKR 1</option>
-                              <option>X TKR 2</option>
-                              <option>X TKR 3</option>
-                              <option>XI TKR 1</option>
-                              <option>XI TKR 2</option>
-                              <option>XI TKR 3</option>
-                              <option>XII TKR 1</option>
-                              <option>XII TKR 2</option>
-                              <option>XII TKR 3</option>
-                              <option>X TSM 1</option>
-                              <option>X TSM 2</option>
-                              <option>X TSM 3</option>
-                              <option>XI TSM 1</option>
-                              <option>XI TSM 2</option>
-                              <option>XI TSM 3</option>
-                              <option>XII TSM 1</option>
-                              <option>XII TSM 2</option>
-                              <option>XII TSM 3</option>
-                            </select><br>
+                          <input class="form-control" name="class"type="text" placeholder="Kelas"value="{{$kelas->class}}">
                         </div>
                       </div>
                       <div class="form-group">
@@ -184,6 +138,5 @@
              });
  	  }
           $('#demoSelect').select2();
-           $('#idclass').select2();
  </script>
 @endsection

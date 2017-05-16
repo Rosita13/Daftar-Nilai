@@ -34,18 +34,11 @@
                     <fieldset>
                       <legend>Data Mata Pelajaran</legend>
                        <div class="form-group">
-                        <label class="col-lg-2 control-label" for="select">Mapel</label>
+                        <label class="col-lg-2 control-label" for="inputMapel">Mapel</label>
                         <div class="col-lg-10">
-                          <select name="mapel_id"class="form-control" id="idmapel">
-                          @foreach($subjects as $subject)
-                          @if($subject->id == $subject->mapel_id)
-                          <option value="{{$subject->id}}"selected>{{$subject->name}}</option>
-                          @endif
-                          <option value="{{$subject->id}}">{{$subject->name}}</option>
-                          @endforeach
-                          </select>
+                          <input class="form-control" name="name"type="text" placeholder="Mata pelajaran"value="{{$subject->name}}">
                         </div>
-                        </div>
+                      </div>
                      <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputNama">Guru</label>
                         <div class="col-lg-10">

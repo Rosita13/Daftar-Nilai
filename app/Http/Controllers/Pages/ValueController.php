@@ -47,8 +47,10 @@ class ValueController extends Controller
       $students = $this->student->getList();
       $classes = $this->class->getList();
       $subjects = $this->subject->getList();
-      $arr= [$students,$classes,$subjects];
       $value = $this->value->findById($id);
-    return view('pages.edit-nilai',compact('students','classes','subjects','value',$arr));
+      $status = ['Remidi','Lulus'];
+      $semester = [1,2];
+      $arr= [$students,$classes,$subjects,$status,$semester];
+    return view('pages.edit-nilai',compact('students','classes','subjects','value','status','semester',$arr));
     }
 }

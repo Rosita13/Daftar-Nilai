@@ -69,8 +69,12 @@
                         <label class="col-lg-2 control-label" for="select">Status</label>
                         <div class="col-lg-10">
                           <select class="form-control" name="status" id="idstatus" value="{{$value->status}}">
-                              <option>Remidi</option>
-                              <option>Lulus</option>
+                              @foreach($status as $s)
+                              @if($s == $value->status)
+                                <option value="{{$s}}" selected>{{$s}}</option>
+                              @endif
+                              <option value="{{$s}}">{{$s}}</option>
+                            @endforeach
                             </select><br>
                         </div>
                       </div>
@@ -78,22 +82,19 @@
                         <label class="col-lg-2 control-label" for="select">Semester</label>
                         <div class="col-lg-10">
                           <select class="form-control"name="semester"id="idsemester" value="{{$value->semester}}">
-                              <option>1</option>
-                              <option>2</option>
+                              @foreach($semester as $s)
+                              @if($s == $value->semester)
+                                <option value="{{$s}}" selected>{{$s}}</option>
+                              @endif
+                              <option value="{{$s}}">{{$s}}</option>
+                            @endforeach
                             </select><br>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="col-lg-2 control-label" for="select">Type</label>
+                        <label class="col-lg-2 control-label" for="inputNilai">Nilai</label>
                         <div class="col-lg-10">
-                          <select class="form-control" name="type"id="idtype" value="{{$value->type}}">
-                              <option>Tugas 1</option>
-                              <option>Tugas 2</option>
-                              <option>UTS</option>
-                              <option>UTS</option>
-                              <option>UAS</option>
-                              <option>UAS</option>
-                            </select><br>
+                          <input class="form-control" name="type"type="text" placeholder="type:UTS"value="{{$value->type}}">
                         </div>
                       </div>
                       <div class="form-group">
@@ -200,7 +201,6 @@
       $('#idclass').select2();
       $('#idmapel').select2();
       $('#idstatus').select2();
-      $('#idtype').select2();
       $('#idsemester').select2();
  </script>
 @endsection
