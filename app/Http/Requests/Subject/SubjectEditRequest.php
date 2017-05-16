@@ -28,7 +28,7 @@ class SubjectEditRequest extends Request
      */
     protected $attrs = [
         'name'    => 'name',
-         'guru_id'  => 'guru_id'
+        'guru_id'  => 'guru_id'
     ];
 
     /**
@@ -40,7 +40,7 @@ class SubjectEditRequest extends Request
     {
         return [
              'name'    => 'required|max:225',
-               'guru_id'    => 'required|max:225'
+            'guru_id'  => 'required|max:225'
              
         ];
     }

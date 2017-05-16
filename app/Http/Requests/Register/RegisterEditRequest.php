@@ -29,7 +29,7 @@ class RegisterEditRequest extends Request
     protected $attrs = [
         'name'    => 'Name',
         'email'   => 'Email',
-        'phone'   => 'Phone',
+        // 'phone'   => 'Phone',
     ];
 
     /**
@@ -42,7 +42,7 @@ class RegisterEditRequest extends Request
         return [
             'name'    => 'required|max:225',
             'email'   => 'required|email|max:225',
-            'phone'   => 'required|max:30',
+            // 'phone'   => 'required|max:30',
         ];
     }
 

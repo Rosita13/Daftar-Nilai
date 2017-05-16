@@ -31,7 +31,6 @@
                   <tr>
                     <th>Nama</th>
                     <th>Email</th>
-                    <th>Telephone</th>
                     <th>Aksi</th>
                   </tr>
                 </thead>
@@ -40,7 +39,6 @@
                   <tr>
                   <td>{{ $user->name }}</td>
                   <td>{{ $user->email }}</td>
-                  <td>{{ $user->phone }}</td>
                   <td>
                    <a class="btn btn-info btn-flat"href={{route('page.edit-user',['id' => $user->id])}}><i class="fa fa-lg fa-edit"></i></a>
                    <a class="btn btn-warning btn-flat"onClick="deleteData('{{$user->id}}')"><i class="fa fa-lg fa-trash"></i></a>

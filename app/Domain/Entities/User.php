@@ -17,7 +17,7 @@ class User extends Entities implements AuthenticatableContract, CanResetPassword
      * @var array
      */
     protected $fillable = [
-        'name','email', 'phone','password'//,'guru_id'
+        'name','email', 'password'//,'guru_id'
     ];
 
     protected $primaryKey = 'id';

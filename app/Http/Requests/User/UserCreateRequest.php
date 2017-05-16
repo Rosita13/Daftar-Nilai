@@ -30,7 +30,7 @@ class UserCreateRequest extends Request
         'name'    => 'Name',
         //  'class'    => 'class',
         'email'   => 'Email',
-        'phone'   => 'Phone',
+        // 'phone'   => 'Phone',
         'password' => 'password',
         // 'guru_id' => 'guru_id',
     ];
@@ -46,7 +46,7 @@ class UserCreateRequest extends Request
             'name'    => 'required|max:225',
             //  'class'    => 'required|max:225',
             'email'   => 'required|email|unique:users,email|max:225',
-            'phone'   => 'required|max:30',
+            // 'phone'   => 'required|max:30',
             'password' => 'required|max:60',
             // 'guru_id' => 'required|max:60',
         ];

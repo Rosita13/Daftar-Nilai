@@ -37,6 +37,9 @@
                         <div class="col-lg-10">
                          <select name="guru_id" class="form-control" id="demoSelect">
                           @foreach($teachers as $teacher)
+                          @if($teacher->id == $kelas->guru_id)
+                          <option value="{{$teacher->id}}"selected>{{$teacher->name}}</option>
+                          @endif
                           <option value="{{$teacher->id}}">{{$teacher->name}}</option>
                           @endforeach
                          </select>

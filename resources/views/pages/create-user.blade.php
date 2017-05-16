@@ -44,12 +44,6 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="col-lg-2 control-label" for="inputTelephone">Telephone</label>
-                        <div class="col-lg-10">
-                          <input class="form-control" name="phone"type="text" placeholder="Telephone" value="">
-                        </div>
-                      </div>
-                      <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputJurusan">Password</label>
                         <div class="col-lg-10">
                           <input class="form-control" name="password"type="password" placeholder=" Password" value="">

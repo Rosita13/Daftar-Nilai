@@ -16,7 +16,7 @@ $factory->define(App\Domain\Entities\User::class, function (Faker\Generator $fak
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'phone' => $faker->phoneNumber,
+        // 'phone' => $faker->phoneNumber,
         'password'=>bcrypt('qwerty')
     ];
 });

@@ -33,37 +33,28 @@
                    <input type="hidden" class="form-control" value="{{$subject->id}}">
                     <fieldset>
                       <legend>Data Mata Pelajaran</legend>
-                      <div class="form-group">
+                       <div class="form-group">
                         <label class="col-lg-2 control-label" for="select">Mapel</label>
                         <div class="col-lg-10">
-                          <select class="form-control" name="name" id="idmapel"value="{{$subject->nip}}">
-                              <option>MTK</option>
-                              <option>KWU</option>
-                              <option>IPA</option>
-                              <option>IPS</option>
-                              <option>B.Indonesia</option>
-                              <option>B.Inggris</option>
-                              <option>B.Jawa</option>
-                              <option>Agama</option>
-                              <option>PKN</option>
-                              <option>KIMIA</option>
-                              <option>Fisika</option>
-                              <option>OR</option>
-                              <option>SBK</option>
-                              <option>WEB</option>
-                              <option>VB</option>
-                              <option>BASDA</option>
-                              <option>KKPI</option>
-                              <option>SQL</option>
-                            </select><br>
+                          <select name="mapel_id"class="form-control" id="idmapel">
+                          @foreach($subjects as $subject)
+                          @if($subject->id == $subject->mapel_id)
+                          <option value="{{$subject->id}}"selected>{{$subject->name}}</option>
+                          @endif
+                          <option value="{{$subject->id}}">{{$subject->name}}</option>
+                          @endforeach
+                          </select>
                         </div>
-                      </div>
+                        </div>
                      <div class="form-group">
                         <label class="col-lg-2 control-label" for="inputNama">Guru</label>
                         <div class="col-lg-10">
                          <select name="guru_id" class="form-control" id="demoSelect">
                           @foreach($teachers as $teacher)
-                          <option value="{{$teacher->id}}">{{$teacher->name}}</option>
+                            @if($teacher->id == $subject->guru_id)
+                          <option value="{{$teacher->id}}" selected>{{$teacher->name}}</option>
+                           @endif
+                           <option value="{{$teacher->id}}">{{$teacher->name}}</option>
                           @endforeach
                          </select>
                         </div>
