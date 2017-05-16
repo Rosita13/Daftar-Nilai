@@ -31,29 +31,10 @@
                 <div class="well bs-component">
                    <form class="form-horizontal" id="formSubject">
                       <legend>Data Mata Pelajaran</legend>
-                       <div class="form-group">
-                        <label class="col-lg-2 control-label" for="select">Mapel</label>
+                        <div class="form-group">
+                        <label class="col-lg-2 control-label" for="inputTugas1">Mapel</label>
                         <div class="col-lg-10">
-                          <select class="form-control" name="name"id="idmapel" value="">
-                              <option>MTK</option>
-                              <option>KWU</option>
-                              <option>IPA</option>
-                              <option>IPS</option>
-                              <option>B.Indonesia</option>
-                              <option>B.Inggris</option>
-                              <option>B.Jawa</option>
-                              <option>Agama</option>
-                              <option>PKN</option>
-                              <option>KIMIA</option>
-                              <option>Fisika</option>
-                              <option>OR</option>
-                              <option>SBK</option>
-                              <option>WEB</option>
-                              <option>VB</option>
-                              <option>BASDA</option>
-                              <option>KKPI</option>
-                              <option>SQL</option>
-                            </select><br>
+                          <input class="form-control" name="name"type="text" placeholder="Mata Pelajaran"value="">
                         </div>
                       </div>
                       <div class="form-group">
@@ -186,7 +167,6 @@
                 timer: 4000
             });
 	  }
-     $('#idmapel').select2();
     $('#demoSelect').select2();
   </script>
 @endsection

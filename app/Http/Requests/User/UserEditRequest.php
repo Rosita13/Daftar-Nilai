@@ -29,7 +29,6 @@ class UserEditRequest extends Request
     protected $attrs = [
         'name'    => 'Name',
         'email'   => 'Email',
-        'phone'   => 'Phone',
     ];
 
     /**
@@ -42,7 +41,6 @@ class UserEditRequest extends Request
         return [
             'name'    => 'required|max:225',
             'email'   => 'required|email|max:225',
-            'phone'   => 'required|max:30',
         ];
     }
 

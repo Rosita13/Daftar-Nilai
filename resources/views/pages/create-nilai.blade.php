@@ -77,16 +77,9 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="col-lg-2 control-label" for="select">Type</label>
+                        <label class="col-lg-2 control-label" for="inputType">Type</label>
                         <div class="col-lg-10">
-                          <select class="form-control"name="type" id="idtype"value="">
-                              <option>Tugas 1</option>
-                              <option>Tugas 2</option>
-                              <option>UTS</option>
-                              <option>UTS</option>
-                              <option>UAS</option>
-                              <option>UAS</option>
-                            </select><br>
+                          <input class="form-control" name="type"type="text" placeholder="Type:UTS"value="">
                         </div>
                       </div>
                       <div class="form-group">
@@ -226,6 +219,5 @@
       $('#idmapel').select2();
       $('#idstatus').select2();
       $('#idsemester').select2();
-      $('#idtype').select2();
   </script>
 @endsection
