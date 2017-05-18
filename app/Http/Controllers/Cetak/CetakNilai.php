@@ -159,7 +159,7 @@ class CetakNilai extends Controller
         $this->Column($pdf);
 //        $pdf->SetY(51);
         $nilai = $this->nilai->getByPagecetak();
-        $pdf->SetAligns(['C', 'C', 'C', 'C', 'JC', 'C', 'C', 'C', 'C', 'C']);
+        $pdf->SetAligns(['C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C']);
         $pdf->SetWidths([50, 60, 25, 35, 25, 25, 25, 25]);
 //dump($nilai);
         if ($nilai == null) {

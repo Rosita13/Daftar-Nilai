@@ -51,7 +51,7 @@ class UserRepository extends AbstractRepository implements UserInterface, Crudab
         ->where('name', 'like', '%' . $search . '%')
         ->orderBy('created_at','desc')
         ->paginate($limit);
-        return parent::paginate($limit, $page, $column, 'name', $search);
+        // return parent::paginate($limit, $page, $column, 'name', $search);
         
         return $user;
     }
