@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                    <form id='loginForm' class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -50,7 +50,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button id='loginButton' type="submit" class="btn btn-primary">
                                     Login
                                 </button>
 
@@ -65,4 +65,15 @@
         </div>
     </div>
 </div>
+<script>
+    $('#loginButton').click(someFunctionForLogin);
+    function someFunctionForLogin(){
+        if(/*ajax login success*/) {
+            $('#loginForm').submit();
+        }
+        else {
+            //do something to show login fail(e.g. display fail messages)
+        }
+    }
+</script>
 @endsection
