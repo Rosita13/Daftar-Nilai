@@ -53,4 +53,5 @@ class ValueController extends Controller
       $arr= [$students,$classes,$subjects,$status,$semester];
     return view('pages.edit-nilai',compact('students','classes','subjects','value','status','semester',$arr));
     }
+    
 }

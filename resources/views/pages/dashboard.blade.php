@@ -18,25 +18,21 @@
           <div class="widget-small primary"><i class="icon fa fa-users fa-3x"></i>
             <div class="info">
               <h4>Users</h4>
-              <p> <b>20</b></p>
             </div>
           </div>
           <div class="widget-small info"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
             <div class="info">
               <h4>Likes</h4>
-              <p> <b>20</b></p>
             </div>
           </div>
           <div class="widget-small danger"><i class="icon fa fa-comments-o fa-3x"></i>
             <div class="info">
               <h4>Comments</h4>
-              <p> <b>200</b></p>
             </div>
           </div>
           <div class="widget-small warning coloured-icon"><i class="icon fa fa-files-o fa-3x"></i>
             <div class="info">
               <h4>Uploades</h4>
-              <p> <b>20</b></p>
             </div>
           </div>
         </div>
